@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카싱크 현장 변수 대응 리포트: 과잉 정비 시비 원천 차단</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap">
+  <style>
+    body { font-family: 'Pretendard', sans-serif; background-color: #f8fafc; color: #0f172a; }
+    .pulse-soft {
+      animation: pulseSoft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulseSoft {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.03); }
+    }
+  </style>
+</head>
+<body class="p-4 md:p-8 flex flex-col items-center justify-start min-h-screen">
+
+  <!-- Top Slide Title Section (이미지와 100% 동일한 헤더 레이아웃) -->
+  <header class="w-full max-w-6xl mb-6">
+    <div class="flex items-center gap-2 mb-2">
+      <span class="text-xs font-bold text-rose-600 tracking-wider uppercase font-mono">CORE MVP 2 · FIELD ISSUE AUTOMATION</span>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+      현장 변수 리포트:<br class="md:hidden"> 과잉 정비 시비 원천 차단
+    </h1>
+
+    <!-- 2-Track Architecture Banner -->
+    <div class="mt-5 p-4 rounded-2xl bg-rose-50/70 border border-rose-200/80">
+      <div class="flex items-center gap-2 font-bold text-slate-900 text-sm md:text-base">
+        <i class="fa-solid fa-code-branch text-rose-500"></i>
+        <span>2단계 현장 변수 분기 프로토콜 (Two-Track Architecture)</span>
+      </div>
+      <p class="text-xs md:text-sm text-slate-600 mt-1">
+        모든 변수를 일률 청구하거나 감추지 않고, 경미 변수와 중대 변수를 명확히 분기하여 차주 신뢰와 정비소 회전율을 동시에 수호합니다.
+      </p>
+    </div>
+  </header>
+
+  <!-- Interactive Mode Selector (현업 PM 시연용 토글 탭) -->
+  <div class="w-full max-w-6xl mb-6 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-white p-2 rounded-2xl border border-slate-200 shadow-sm">
+    <div class="flex items-center gap-2">
+      <span class="text-xs font-bold text-slate-500 pl-2 hidden md:inline">현장 시뮬레이션 모드:</span>
+      <button id="btnTrack1" onclick="switchTrack('track1')" class="flex-1 sm:flex-none px-4 py-2.5 rounded-xl font-bold text-xs md:text-sm transition flex items-center justify-center gap-2 bg-emerald-600 text-white shadow">
+        <i class="fa-solid fa-gift"></i> Track 1. 경미 변수 (무상 케어 생색)
+      </button>
+      <button id="btnTrack2" onclick="switchTrack('track2')" class="flex-1 sm:flex-none px-4 py-2.5 rounded-xl font-bold text-xs md:text-sm transition flex items-center justify-center gap-2 bg-slate-100 text-slate-600 hover:bg-slate-200">
+        <i class="fa-solid fa-triangle-exclamation"></i> Track 2. 중대 변수 (Stop & Hold)
+      </button>
+    </div>
+    <div class="text-right pr-2">
+      <span class="text-[11px] font-mono text-slate-400">오프라인 B2B2C 매핑 엔진 가동 중</span>
+    </div>
+  </div>
+
+  <!-- Main Dual Interactive Canvas -->
+  <main class="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-6 items-start mb-8">
+
+    <!-- LEFT: 정비사 현장 인터페이스 (POS / 태블릿) -->
+    <section class="bg-white border-2 border-slate-200 rounded-3xl p-5 shadow-sm">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+        <div class="flex items-center gap-2">
+          <span class="w-6 h-6 rounded-lg bg-blue-100 text-blue-600 font-bold text-xs flex items-center justify-center">A</span>
+          <h2 class="text-sm font-bold text-slate-800">정비사 현장 화면 (타이핑 0초 원터치)</h2>
+        </div>
+        <span class="text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-mono">
+          아반떼 AD (12가 3456)
+        </span>
+      </div>
+
+      <!-- Mechanic Card Content -->
+      <div class="space-y-4">
+        
+        <!-- Track 1 Mechanic View -->
+        <div id="mechTrack1" class="space-y-3">
+          <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-200">
+            <span class="text-xs font-bold text-emerald-800 block mb-1">
+              <i class="fa-solid fa-wrench"></i> 현장 상황: 하부 볼트 경미한 녹 고착 발견
+            </span>
+            <p class="text-xs text-emerald-700">
+              방청 윤활제(WD)를 도포하여 부드럽게 유격 해제 완료. 2만 원 상당의 가치를 차주에게 호의로 전달합니다.
+            </p>
+          </div>
+
+          <!-- Photo Preview -->
+          <div>
+            <label class="text-xs font-bold text-slate-600 block mb-1.5">증빙 사진 (1장 촬영 완료)</label>
+            <div class="h-32 bg-slate-100 rounded-xl border-2 border-dashed border-slate-300 flex flex-col items-center justify-center text-slate-400">
+              <i class="fa-solid fa-camera text-2xl text-emerald-500 mb-1"></i>
+              <span class="text-xs font-medium text-slate-600">방청 윤활제 도포 및 체결 완료 사진</span>
+              <span class="text-[10px] text-slate-400">카메라 자동 셔터 연동</span>
+            </div>
+          </div>
+
+          <!-- One-touch Button -->
+          <button onclick="triggerTrack1Action()" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-xl shadow transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-heart-circle-check"></i> [안심 무상 케어] 리포트 원터치 발송 (작업 속행)
+          </button>
+          <p class="text-[11px] text-center text-slate-400">
+            * 차주 결제 승인을 기다리지 않고 즉시 출고 준비를 진행합니다.
+          </p>
+        </div>
+
+        <!-- Track 2 Mechanic View (Hidden by default) -->
+        <div id="mechTrack2" class="hidden space-y-3">
+          <div class="p-3 bg-rose-50 rounded-xl border border-rose-200">
+            <span class="text-xs font-bold text-rose-800 block mb-1">
+              <i class="fa-solid fa-triangle-exclamation"></i> 현장 상황: 연관 부품 크랙 및 누유 (수십만 원 견적)
+            </span>
+            <p class="text-xs text-rose-700">
+              밸브바디 미세 크랙 및 로워암 체결부 손상. 리프트 점유 제약으로 인해 승인 없이 즉시 하차 또는 긴급 견적 협의가 필요합니다.
+            </p>
+          </div>
+
+          <!-- Photo & Voice -->
+          <div class="grid grid-cols-2 gap-2">
+            <div class="h-28 bg-slate-100 rounded-xl border-2 border-dashed border-slate-300 flex flex-col items-center justify-center text-slate-400">
+              <i class="fa-solid fa-image text-xl text-rose-500 mb-1"></i>
+              <span class="text-[11px] font-semibold text-slate-600">크랙 부위 정밀 사진</span>
+            </div>
+            <div class="h-28 bg-slate-100 rounded-xl border-2 border-dashed border-slate-300 flex flex-col items-center justify-center text-slate-400">
+              <i class="fa-solid fa-microphone-lines text-xl text-rose-500 mb-1"></i>
+              <span class="text-[11px] font-semibold text-slate-600">10초 음성 브리핑 녹음</span>
+              <span class="text-[10px] text-rose-600 font-mono">00:09 완료</span>
+            </div>
+          </div>
+
+          <!-- Two Buttons: Stop & Hold -->
+          <div class="grid grid-cols-2 gap-2 pt-1">
+            <button onclick="triggerTrack2Action('safe_exit')" class="py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs rounded-xl shadow transition">
+              <i class="fa-solid fa-arrow-down"></i> 즉시 하차 & 안전 출고
+            </button>
+            <button onclick="triggerTrack2Action('stop_hold')" class="py-3 bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs rounded-xl shadow transition">
+              <i class="fa-solid fa-hand"></i> 작업 중단 & 차주 모바일 승인 요청
+            </button>
+          </div>
+          <p class="text-[11px] text-center text-rose-600 font-medium">
+            * 10분 골든타임 에스컬레이션 룰 가동 (리프트 공실 손실 방어)
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RIGHT: 차주 스마트폰 알림톡 / 웹뷰 화면 (Customer View) -->
+    <section class="bg-white border-2 border-slate-200 rounded-3xl p-5 shadow-sm">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+        <div class="flex items-center gap-2">
+          <span class="w-6 h-6 rounded-lg bg-amber-100 text-amber-600 font-bold text-xs flex items-center justify-center">B</span>
+          <h2 class="text-sm font-bold text-slate-800">차주 카카오 알림톡 웹뷰 (고객 체감 화면)</h2>
+        </div>
+        <span id="custStatusTag" class="text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-700">
+          실시간 발송 완료
+        </span>
+      </div>
+
+      <!-- Smartphone Frame Container -->
+      <div class="bg-slate-900 text-white rounded-2xl p-4 shadow-inner min-h-[380px] flex flex-col justify-between">
+
+        <!-- Track 1 Customer Result View -->
+        <div id="custTrack1" class="space-y-3">
+          <div class="flex items-center gap-2 text-emerald-400 text-xs font-bold">
+            <i class="fa-solid fa-bell"></i> 카싱크 정비 안심 알림
+          </div>
+
+          <div class="bg-slate-800/90 border border-emerald-500/40 p-4 rounded-xl">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-bold text-white">동일모터스 김진우 명장</span>
+              <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded-full font-bold">무상 서비스</span>
+            </div>
+            
+            <!-- 슬라이드에 적힌 문구 그대로 100% 매핑 -->
+            <div class="p-3 bg-amber-500/10 border-l-4 border-amber-400 rounded text-xs text-amber-200 leading-relaxed font-medium">
+              “하부 볼트 녹 고착이 확인되었으나, 정비사님의 현장 판단으로 <strong class="text-white underline">20,000원 상당 방청 윤활 작업</strong>을 무상 서비스로 완료했습니다.”
+            </div>
+
+            <div class="mt-3 flex items-center justify-between text-xs text-slate-300 pt-2 border-t border-slate-700">
+              <span>추가 결제 발생액</span>
+              <span class="text-emerald-400 font-bold font-mono">0 원 (FREE)</span>
+            </div>
+          </div>
+
+          <!-- Customer Reaction Card -->
+          <div class="p-3 bg-slate-800 rounded-xl text-xs space-y-1">
+            <span class="text-slate-400 block text-[10px] font-semibold">차주 심리 효과</span>
+            <p class="text-slate-200">
+              <i class="fa-solid fa-quote-left text-slate-500 mr-1"></i>
+              "다른 데 같았으면 2만 원 더 달라고 했을 텐데 사진이랑 같이 무료로 해줬다고 카톡이 오네? 여기 진짜 양심 카센터다!"
+            </p>
+          </div>
+        </div>
+
+        <!-- Track 2 Customer Result View (Hidden by default) -->
+        <div id="custTrack2" class="hidden space-y-3">
+          <div class="flex items-center justify-between text-xs">
+            <span class="text-rose-400 font-bold flex items-center gap-1.5">
+              <i class="fa-solid fa-triangle-exclamation"></i> 정비 현장 긴급 중대 변수 발생
+            </span>
+            <span class="text-slate-400 font-mono text-[10px]">응답 제한시간: 09:42</span>
+          </div>
+
+          <!-- 슬라이드에 적힌 문구 그대로 100% 매핑 -->
+          <div class="bg-slate-800/90 border border-rose-500/40 p-4 rounded-xl space-y-2">
+            <div class="p-3 bg-rose-500/10 border-l-4 border-rose-500 rounded text-xs text-rose-200 leading-relaxed">
+              ⚠️ “안전 점검 중 연관 부품 크랙 발견. 리프트 점유 제약으로 인해 선택 필요.”
+            </div>
+
+            <!-- Two Branch Choices -->
+            <div class="space-y-1.5 pt-1">
+              <div class="p-2.5 bg-slate-900 rounded-lg border border-slate-700 flex justify-between items-center text-xs">
+                <div>
+                  <strong class="text-white block">옵션 A (안전 출고)</strong>
+                  <span class="text-[10px] text-slate-400">추가 작업 없이 기본 예약 작업만 마감 후 차량 하차</span>
+                </div>
+                <button onclick="alert('옵션 A가 선택되었습니다. 정비사가 차량을 리프트에서 안전하게 하차시킵니다.')" class="px-2.5 py-1.5 bg-slate-700 hover:bg-slate-600 text-white rounded text-[11px] font-bold">선택</button>
+              </div>
+
+              <div class="p-2.5 bg-slate-900 rounded-lg border border-rose-500/40 flex justify-between items-center text-xs">
+                <div>
+                  <strong class="text-rose-300 block">옵션 B (정밀 수리)</strong>
+                  <span class="text-[10px] text-slate-400">추가 견적 확정 후 정밀 정비 일정 협의 (부품 수급)</span>
+                </div>
+                <button onclick="alert('옵션 B가 승인되었습니다. 타임스탬프 감사 로그가 DB에 저장됩니다.')" class="px-2.5 py-1.5 bg-rose-600 hover:bg-rose-500 text-white rounded text-[11px] font-bold">승인</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-2 bg-slate-800 rounded-lg text-center text-[10px] text-slate-400 font-mono">
+            감사 로그 고유키: CS-AUDIT-202610-0941
+          </div>
+        </div>
+
+        <!-- Sticky Bottom Audit Status -->
+        <div class="pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
+          <span><i class="fa-solid fa-shield-halved text-indigo-400"></i> 사후 과잉 정비 시비 100% 방어</span>
+          <span class="text-slate-300 font-mono">카싱크 코어 엔진</span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Bottom Explanatory Comparison Cards (슬라이드 텍스트 박스와 1:1 완벽 정렬) -->
+  <footer class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-6 text-xs leading-relaxed">
+    
+    <!-- Track 1 Card -->
+    <div class="bg-white p-5 rounded-2xl border-t-4 border-emerald-500 shadow-sm border-x border-b border-slate-200">
+      <div class="flex justify-between items-center mb-2">
+        <span class="px-2.5 py-0.5 rounded-full font-bold text-[11px] bg-emerald-100 text-emerald-800">Track 1 · 경미 변수</span>
+        <span class="text-emerald-600 font-semibold font-mono text-[11px]">단순 공임 영역</span>
+      </div>
+      <h3 class="text-base font-bold text-slate-900 mb-1">[무상 케어 생색 리포트]</h3>
+      <span class="text-slate-500 block mb-3 font-medium">볼트 고착, 녹 제거 등 경미한 현장 변수</span>
+
+      <div class="bg-slate-50 p-3 rounded-xl mb-3 text-slate-700">
+        <strong class="text-slate-900 block mb-0.5 text-[11px]">현장 현실</strong>
+        방청 윤활제(WD)를 도포하고 달래가며 풀면 되는 2~3만 원대 작업을 굳이 추가 청구하여 고객 마찰을 일으킬 필요가 없음.
+      </div>
+
+      <div class="space-y-1 text-slate-600">
+        <p>• <strong>정비사</strong>: 기름 묻은 손으로 타이핑 없이, 고착 부위 사진 1장 촬영 후 <strong>[안심 무상 케어]</strong> 원터치 전송</p>
+        <p>• <strong>시스템</strong>: 차주 카카오톡으로 자동 정제된 감사 알림톡 발송</p>
+      </div>
+
+      <div class="mt-3 pt-3 border-t border-slate-100 text-slate-600 space-y-1 text-[11px]">
+        <strong class="text-slate-900 block">기대 효과</strong>
+        <p>• <strong>차주</strong>: 과잉 정비 의심 대신 "양심 정비소"라는 신뢰 형성 및 단골 락인</p>
+        <p>• <strong>정비사</strong>: 번거로운 결제 승인 대기 없이 작업 흐름 유지, 전문성과 호의 브랜딩</p>
+        <p>• <strong>플랫폼</strong>: 자잘한 공임 분쟁 및 CS 유입 원천 차단</p>
+      </div>
+    </div>
+
+    <!-- Track 2 Card -->
+    <div class="bg-white p-5 rounded-2xl border-t-4 border-rose-500 shadow-sm border-x border-b border-slate-200">
+      <div class="flex justify-between items-center mb-2">
+        <span class="px-2.5 py-0.5 rounded-full font-bold text-[11px] bg-rose-100 text-rose-800">Track 2 · 중대 변수</span>
+        <span class="text-rose-600 font-semibold font-mono text-[11px]">리프트 하차 위기</span>
+      </div>
+      <h3 class="text-base font-bold text-slate-900 mb-1">[Stop & Hold 프로토콜]</h3>
+      <span class="text-slate-500 block mb-3 font-medium">부품 연쇄 파손, 수십만 원 단위 추가 위험</span>
+
+      <div class="bg-slate-50 p-3 rounded-xl mb-3 text-slate-700">
+        <strong class="text-slate-900 block mb-0.5 text-[11px]">현장 현실</strong>
+        밸브바디 누유, 너클 크랙 등 수십만 원 견적이 추가되거나 부품 재수급으로 당일 작업이 불가능해지는 진짜 위험 영역.
+      </div>
+
+      <div class="space-y-1 text-slate-600">
+        <p>• <strong>정비사</strong>: 작업 즉시 중단 후 문제 부위 사진 2장 + 10초 음성 녹음 전송</p>
+        <p>• <strong>시스템</strong>: 표준 안내문 자동 생성 및 차주 모바일 승인 요청 발송</p>
+      </div>
+
+      <div class="mt-3 pt-3 border-t border-slate-100 text-slate-600 space-y-1 text-[11px]">
+        <strong class="text-slate-900 block">기대 효과</strong>
+        <p>• <strong>분쟁 원천 방어</strong>: 타임스탬프 기반 감사 로그(Audit Log)를 영구 저장하여 사후 바가지 시비 방지</p>
+        <p>• <strong>운영 손실 차단</strong>: 리프트가 무한정 묶이는 정비소의 공실 리스크 완전 제거</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <script>
+    function switchTrack(track) {
+      const btn1 = document.getElementById('btnTrack1');
+      const btn2 = document.getElementById('btnTrack2');
+      const mech1 = document.getElementById('mechTrack1');
+      const mech2 = document.getElementById('mechTrack2');
+      const cust1 = document.getElementById('custTrack1');
+      const cust2 = document.getElementById('custTrack2');
+      const statusTag = document.getElementById('custStatusTag');
+
+      if (track === 'track1') {
+        btn1.className = 'flex-1 sm:flex-none px-4 py-2.5 rounded-xl font-bold text-xs md:text-sm transition flex items-center justify-center gap-2 bg-emerald-600 text-white shadow';
+        btn2.className = 'flex-1 sm:flex-none px-4 py-2.5 rounded-xl font-bold text-xs md:text-sm transition flex items-center justify-center gap-2 bg-slate-100 text-slate-600 hover:bg-slate-200';
+        mech1.classList.remove('hidden');
+        mech2.classList.add('hidden');
+        cust1.classList.remove('hidden');
+        cust2.classList.add('hidden');
+        statusTag.className = 'text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-100 text-emerald-700';
+        statusTag.innerText = '실시간 무상 발송 완료';
+      } else {
+        btn2.className = 'flex-1 sm:flex-none px-4 py-2.5 rounded-xl font-bold text-xs md:text-sm transition flex items-center justify-center gap-2 bg-rose-600 text-white shadow';
+        btn1.className = 'flex-1 sm:flex-none px-4 py-2.5 rounded-xl font-bold text-xs md:text-sm transition flex items-center justify-center gap-2 bg-slate-100 text-slate-600 hover:bg-slate-200';
+        mech2.classList.remove('hidden');
+        mech1.classList.add('hidden');
+        cust2.classList.remove('hidden');
+        cust1.classList.add('hidden');
+        statusTag.className = 'text-[11px] font-bold px-2 py-0.5 rounded bg-rose-100 text-rose-700';
+        statusTag.innerText = '긴급 승인 대기 중 (작업 정지)';
+      }
+    }
+
+    function triggerTrack1Action() {
+      alert("✅ [Track 1 안심 무상 케어] 리포트가 차주에게 전송되었습니다!\n- 차주 카톡: '20,000원 상당 방청 윤활 작업 무상 완료'\n- 정비사는 대기 없이 계속 출고 작업을 진행합니다.");
+    }
+
+    function triggerTrack2Action(type) {
+      if(type === 'safe_exit') {
+        alert("🚗 [옵션 A 선택] 차량 안전 하차 모드 가동:\n- 추가 작업 없이 기본 예약 작업만 결제 정산 후 차량을 하차합니다.");
+      } else {
+        alert("🛑 [옵션 B 선택] Stop & Hold 가동:\n- 리프트 작업 일시 중지\n- 차주 스마트폰으로 긴급 견적 승인 알림톡 전송\n- 10분 내 미승인 시 자동 하차 모드로 전환됩니다.");
+      }
+    }
+  </script>
+</body>
+</html>
