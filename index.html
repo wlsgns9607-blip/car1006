@@ -1,505 +1,1123 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>카싱크 × 세차의 정석</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
-<style>
-:root{--bg:#f6f7fb;--bg2:#ffffff;--fg:#12141c;--mut:#5b6275;--card:#fff;--line:#e3e6ef;--ac:#e5322d;--soft:#fdecec;box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1017;--bg2:#12151e;--fg:#f1f3f9;--mut:#9aa2b8;--card:#171a24;--line:#262b3a;--ac:#ff5a52;--soft:#2a1717}}
-:root[data-theme="dark"]{--bg:#0e1017;--bg2:#12151e;--fg:#f1f3f9;--mut:#9aa2b8;--card:#171a24;--line:#262b3a;--ac:#ff5a52;--soft:#2a1717}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:calc(60px + env(safe-area-inset-top,0px))}
-body{background:var(--bg);color:var(--fg);font-family:'Noto Sans KR',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif}
-header{position:sticky;top:0;z-index:9;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-header div{max-width:1100px;margin:0 auto;height:56px;padding:0 20px;display:flex;align-items:center;gap:20px}
-.logo{font-weight:900;font-size:18px}.logo span{color:var(--ac)}
-nav{display:flex;gap:16px;margin-left:auto;overflow-x:auto;white-space:nowrap}
-nav a{font-size:13px;font-weight:500;color:var(--mut);text-decoration:none}nav a:hover{color:var(--ac)}
-section{padding:clamp(56px,9vw,110px) 20px}
-section:nth-of-type(even){background:var(--bg2)}
-.w{max-width:1100px;margin:0 auto}
-.tag{font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--ac);text-transform:uppercase;margin-bottom:10px}
-h1{font-size:clamp(38px,8vw,84px);font-weight:900;line-height:1.08;margin-bottom:18px}
-h2{font-size:clamp(24px,4.2vw,42px);font-weight:900;line-height:1.25;margin-bottom:28px}
-h3{font-size:17px;font-weight:700;margin-bottom:8px}
-p,li{font-size:clamp(15px,1.7vw,17px);line-height:1.7;color:var(--mut)}
-li{margin-left:18px}b{color:var(--fg)}
-.hero{min-height:88vh;display:flex;align-items:center;background:radial-gradient(900px 400px at 85% 10%,var(--soft),transparent 70%)}
-.hero h1 span{color:var(--ac)}
-.lead{font-size:clamp(17px,2.4vw,26px);color:var(--fg);font-weight:500;margin-bottom:24px}
-.quote{font-size:clamp(16px,2.2vw,22px);font-weight:700;border-left:4px solid var(--ac);padding-left:16px;margin:22px 0}
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}
-.card.hl{border-color:var(--ac);background:var(--soft)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
-.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:14px;font-weight:500}
-.chip.r{background:var(--ac);border-color:var(--ac);color:#fff}
-.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
-.flow .chip{font-weight:700}.flow i{color:var(--ac);font-style:normal;font-weight:900}
-.big{font-size:clamp(34px,5vw,52px);font-weight:900;color:var(--ac);line-height:1.1}
-.stats{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:20px}
-.stats .card{text-align:center}.stats p{font-size:13px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--ac);color:#fff;font-weight:700;padding:13px 26px;border-radius:999px;text-decoration:none;transition:transform .2s,box-shadow .2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,0.15)}
-footer{padding:36px 20px;text-align:center;font-size:13px;color:var(--mut);border-top:1px solid var(--line)}
-.rv{opacity:0;transform:translateY(24px);transition:.6s}.rv.in{opacity:1;transform:none}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>CarSync(카싱크) | 모빌리티 AX 프로덕트 매니저 포트폴리오 - 조진훈</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap">
+    <style>
+        :root {
+            --bg: #f6f7fb;
+            --bg2: #ffffff;
+            --fg: #12141c;
+            --mut: #5b6275;
+            --card: #fff;
+            --line: #e3e6ef;
+            --ac: #e5322d;
+            --soft: #fdecec;
+            box-sizing: border-box;
+            padding-bottom: env(safe-area-inset-bottom, 0px)
+        }
+
+        @media (prefers-color-scheme:dark) {
+            :root:not([data-theme="light"]) {
+                --bg: #0e1017;
+                --bg2: #12151e;
+                --fg: #f1f3f9;
+                --mut: #9aa2b8;
+                --card: #171a24;
+                --line: #262b3a;
+                --ac: #ff5a52;
+                --soft: #2a1717
+            }
+        }
+
+        :root[data-theme="dark"] {
+            --bg: #0e1017;
+            --bg2: #12151e;
+            --fg: #f1f3f9;
+            --mut: #9aa2b8;
+            --card: #171a24;
+            --line: #262b3a;
+            --ac: #ff5a52;
+            --soft: #2a1717
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(60px + env(safe-area-inset-top, 0px))
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--fg);
+            font-family: 'Noto Sans KR', -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 9;
+            padding-top: env(safe-area-inset-top, 0px);
+            background: color-mix(in srgb, var(--bg) 88%, transparent);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line)
+        }
+
+        header div {
+            max-width: 1100px;
+            margin: 0 auto;
+            height: 56px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 18px
+        }
+
+        .logo span {
+            color: var(--ac)
+        }
+
+        nav {
+            display: flex;
+            gap: 16px;
+            margin-left: auto;
+            overflow-x: auto;
+            white-space: nowrap
+        }
+
+        nav a {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--mut);
+            text-decoration: none
+        }
+
+        nav a:hover {
+            color: var(--ac)
+        }
+
+        section {
+            padding: clamp(56px, 9vw, 110px) 20px
+        }
+
+        section:nth-of-type(even) {
+            background: var(--bg2)
+        }
+
+        .w {
+            max-width: 1100px;
+            margin: 0 auto
+        }
+
+        .tag {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .08em;
+            color: var(--ac);
+            text-transform: uppercase;
+            margin-bottom: 10px
+        }
+
+        h1 {
+            font-size: clamp(38px, 8vw, 84px);
+            font-weight: 900;
+            line-height: 1.08;
+            margin-bottom: 18px
+        }
+
+        h2 {
+            font-size: clamp(24px, 4.2vw, 42px);
+            font-weight: 900;
+            line-height: 1.25;
+            margin-bottom: 28px
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 8px
+        }
+
+        p,
+        li {
+            font-size: clamp(15px, 1.7vw, 17px);
+            line-height: 1.7;
+            color: var(--mut)
+        }
+
+        li {
+            margin-left: 18px
+        }
+
+        b {
+            color: var(--fg)
+        }
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            background: radial-gradient(900px 400px at 85% 10%, var(--soft), transparent 70%)
+        }
+
+        .hero h1 span {
+            color: var(--ac)
+        }
+
+        .lead {
+            font-size: clamp(17px, 2.4vw, 26px);
+            color: var(--fg);
+            font-weight: 500;
+            margin-bottom: 24px
+        }
+
+        .quote {
+            font-size: clamp(16px, 2.2vw, 22px);
+            font-weight: 700;
+            border-left: 4px solid var(--ac);
+            padding-left: 16px;
+            margin: 22px 0
+        }
+
+        .grid {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 22px
+        }
+
+        .card.hl {
+            border-color: var(--ac);
+            background: var(--soft)
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px
+        }
+
+        .chip {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            padding: 8px 15px;
+            font-size: 14px;
+            font-weight: 500
+        }
+
+        .chip.r {
+            background: var(--ac);
+            border-color: var(--ac);
+            color: #fff
+        }
+
+        .flow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+            margin: 10px 0
+        }
+
+        .flow .chip {
+            font-weight: 700
+        }
+
+        .flow i {
+            color: var(--ac);
+            font-style: normal;
+            font-weight: 900
+        }
+
+        .big {
+            font-size: clamp(34px, 5vw, 52px);
+            font-weight: 900;
+            color: var(--ac);
+            line-height: 1.1
+        }
+
+        .stats {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            margin-bottom: 20px
+        }
+
+        .stats .card {
+            text-align: center
+        }
+
+        .stats p {
+            font-size: 13px
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background: var(--ac);
+            color: #fff;
+            font-weight: 700;
+            padding: 13px 26px;
+            border-radius: 999px;
+            text-decoration: none;
+            transition: transform .2s, box-shadow .2s
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15)
+        }
+
+        footer {
+            padding: 36px 20px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--mut);
+            border-top: 1px solid var(--line)
+        }
+
+        .rv {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: .6s
+        }
+
+        .rv.in {
+            opacity: 1;
+            transform: none
+        }
+    </style>
 </head>
+
 <body>
-<header><div><span class="logo">Car<span>Sync</span></span>
-<nav><a href="#problem">문제</a><a href="#comparison">선발주자 비교</a><a href="#solution">솔루션</a><a href="#mvp">MVP</a><a href="#field">현장</a><a href="#offline">결제</a><a href="#gtm">GTM</a><a href="#model">수익</a><a href="#vision">비전</a><a href="#next">로드맵</a><a href="2.html" target="_blank" rel="noopener noreferrer" style="color:#059669;font-weight:700;background:#ecfdf5;padding:6px 14px;border-radius:999px;border:1px solid #10b981">🎮 현장 시뮬레이터 ↗</a><a href="https://1008-jinhun-o9lgykd3u-wlsgns9607-7857s-projects.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:var(--ac);font-weight:700;background:var(--soft);padding:6px 14px;border-radius:999px;border:1px solid var(--ac)">🚀 테스트버전 ↗</a></nav></div></header>
+    <header>
+        <div><span class="logo">Car<span>Sync</span> <small style="font-size:11px;color:var(--mut);font-weight:600;padding:2px 6px;border-radius:6px;background:var(--card);border:1px solid var(--line);margin-left:4px">PM Portfolio</small></span>
+            <nav><a href="#pitch" style="color:var(--ac);font-weight:800">⚡ 5분 피치</a><a href="#problem">문제 정의</a><a href="#comparison">선발주자 비교</a><a href="#solution">부품 체계</a><a
+                    href="#field">STOP &amp; HOLD</a><a href="#offline">결제 안전망</a><a href="#gtm">중고차 사후케어</a><a
+                    href="#model">비즈니스 임팩트</a><a href="#vision">플라이휠</a><a href="#next">PM 로드맵</a><a href="2.html" target="_blank"
+                    rel="noopener noreferrer"
+                    style="color:#059669;font-weight:700;background:#ecfdf5;padding:6px 14px;border-radius:999px;border:1px solid #10b981">🎮
+                    STOP &amp; HOLD 시뮬레이터 ↗</a><a href="https://1008-jinhun-o9lgykd3u-wlsgns9607-7857s-projects.vercel.app/"
+                    target="_blank" rel="noopener noreferrer"
+                    style="color:var(--ac);font-weight:700;background:var(--soft);padding:6px 14px;border-radius:999px;border:1px solid var(--ac)">🚀
+                    프로덕트 MVP ↗</a></nav>
+        </div>
+    </header>
 
-<section class="hero"><div class="w">
-<div class="tag">현장 중심 B2B2C 모빌리티 테크 솔루션</div>
-<h1>카싱크 <small style="font-size:.5em;color:var(--mut)">CarSync</small><br><span>× 세차의 정석</span></h1>
-<p class="lead">고속도로 2차 사고 방지 핵심 7대 부품 정밀 케어 플랫폼</p>
-<div class="quote">“사람의 생명은 그 어떤 돈과도 바꿀 수 없습니다.”</div>
-<p style="margin-bottom:24px">발표자 · 기획 총괄 <b>조진훈 PM</b></p>
-<div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
-<a class="btn" href="https://1008-jinhun-o9lgykd3u-wlsgns9607-7857s-projects.vercel.app/" target="_blank" rel="noopener noreferrer" style="box-shadow:0 4px 16px rgba(229,50,45,0.35)">🚀 테스트버전 바로가기 ↗</a>
-<a class="btn" href="#problem" style="background:var(--card);color:var(--fg);border:1px solid var(--line)">자세히 보기 ↓</a>
-</div>
-</div></section>
+    <section class="hero">
+        <div class="w">
+            <div class="tag">Mobility AX Product Manager Portfolio</div>
+            <h1>카싱크 <small style="font-size:.5em;color:var(--mut)">CarSync</small><br><span>× 세차의 정석</span></h1>
+            <p class="lead">고속도로 2차 사고 방지 핵심 7대 부품 정밀 케어 서비스 아키텍처</p>
+            <div class="quote">“소비자 화면(UI)은 마이클과 유사할 수 있으나, 본 기획의 코어는 화면이 아닌 <b>‘현장의 백엔드(3중 감사 로그, STOP &amp; HOLD, 파워트레인별 가변 룰 엔진)’</b>에 있습니다.”</div>
+            <p style="margin-bottom:20px"><b>모빌리티 AX 프로덕트 매니저 지원자 조진훈</b></p>
+            
+            <!-- 포트폴리오 핵심 요약 및 문제 해결 정의 -->
+            <div class="card rv" style="background:var(--card);border:1px solid var(--line);border-left:4px solid var(--ac);border-radius:14px;padding:18px 22px;margin-bottom:28px;max-width:880px">
+                <div style="font-size:12px;font-weight:800;color:var(--ac);letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px">
+                    PM Service Architecture &amp; Core Competency
+                </div>
+                <p style="font-size:14px;line-height:1.75;margin:0;color:var(--fg)">
+                    본 프로젝트는 신규 스타트업 창업 IR이 아닌, <b>기존 선발주자(마이클·카닥)의 구조적 한계와 오프라인 정비 현장의 분쟁 병목을 기술로 해결하기 위해 PM으로서 설계한 서비스 아키텍처 및 문제 해결 역량 증명서</b>입니다.<br>
+                    정비 현장의 암묵지와 복잡한 오프라인 변수를 표준화된 데이터 파이프라인으로 구조화하여, <b>'현장 분쟁 비용 제로화'</b>와 <b>'플랫폼 결제 누수 차단'</b>을 동시에 달성하는 백엔드 프로세스를 설계했습니다.
+                </p>
+            </div>
 
-<section id="problem"><div class="w">
-<div class="tag">Problem</div>
-<h2>진짜 결핍은 5,000km가 아니라<br><span style="color:var(--ac)">100,000km</span>에 있습니다</h2>
-<div class="grid">
-<div class="card hl rv"><h3>페르소나 실화 · 조복만 님</h3>
-<ul><li>아반떼 AD, 고속도로 주행 중 변속 슬립 및 출력 저하로 주행 멈춤 위기</li>
-<li>갓길 정비소 긴급 입고 → 미션오일 산화 진단, 현장 결제 <b>170,000원</b></li>
-<li>고통: 엔진오일 외 핵심 소모품 사전 정보 부재, 낯선 정비소 견적 불안</li></ul></div>
-<div class="card rv"><h3>기존 플랫폼의 구조적 한계 (마이클·카닥)</h3>
-<ul><li>20,000~30,000원대 단순 엔진오일 쿠폰 가격 경쟁에 매몰</li>
-<li>현장 변수와 공임 시비가 큰 100,000km 고위험 부품 영역 전면 방치</li></ul></div>
-</div>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+                <a class="btn" href="#pitch" style="box-shadow:0 4px 16px rgba(229,50,45,0.35);font-weight:800">⚡ 5분 발표 피치보드 ↓</a>
+                <a class="btn" href="2.html" target="_blank" rel="noopener noreferrer"
+                    style="background:#ecfdf5;color:#059669;border:1px solid #10b981">🎮 STOP &amp; HOLD 시뮬레이터 ↗</a>
+                <a class="btn" href="https://1008-jinhun-o9lgykd3u-wlsgns9607-7857s-projects.vercel.app/"
+                    target="_blank" rel="noopener noreferrer" style="background:var(--card);color:var(--fg);border:1px solid var(--line)">🚀
+                    프로덕트 MVP ↗</a>
+            </div>
+        </div>
+    </section>
 
-<!-- 선발 주자가 비워둔 10만km 독점 시장 분석 -->
-<div class="card rv" style="margin-top:20px;border-left:4px solid var(--ac);background:var(--soft)">
-<div style="font-size:12px;font-weight:800;color:var(--ac);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px">WHY CARSYNC · 독점 시장의 기회</div>
-<h3 style="font-size:clamp(17px,2vw,22px);color:var(--fg);margin-bottom:12px;line-height:1.4">
-“마이클이나 카닥 같은 선발 주자들도 다 생각해 봤을 텐데, 왜 10만km 고위험 부품은 손을 안 댔을까?”
-</h3>
-<p style="font-size:16px;color:var(--fg);line-height:1.75;margin-bottom:10px">
-이유는 명확합니다. <b>‘현장 변수로 인한 CS 분쟁을 감당할 수 없었기 때문’</b>입니다.
-</p>
-<p style="font-size:15px;line-height:1.75;color:var(--mut);margin-bottom:12px">
-리프트 밑에서 발생하는 염화칼슘 부식, 볼트 고착, 산소 불대 추가 공임은 정찰제 앱이 통제할 수 없는 영역이었습니다. 그래서 그들은 2만 원짜리 엔진오일 쿠폰 장사로 도망쳤습니다.
-</p>
-<div style="background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-top:8px">
-<p style="font-size:15px;line-height:1.7;margin:0;color:var(--fg)">
-카싱크는 이 변수를 회피하지 않고, <b>[정비사 10초 음성 리포트 + 차주 모바일 원터치 사전 승인 로그]</b>라는 기술적 완충 장치로 해결했습니다.<br>
-<b style="color:var(--ac);display:inline-block;margin-top:4px">“대기업이 CS가 무서워 비워둔 이 거대한 10만km 고단가 시장이 바로 카싱크의 독점 영역입니다.”</b>
-</p>
-</div>
-</div>
+    <!-- ⚡ 5-Minute Executive Pitch Board: 현업 기획자 발표용 5분 핵심 브리프 -->
+    <section id="pitch" style="padding-top:40px;padding-bottom:50px;background:color-mix(in srgb,var(--soft) 40%,transparent);border-bottom:1px solid var(--line)">
+        <div class="w">
+            <div style="background:var(--card);border:2px solid var(--ac);border-radius:22px;padding:26px 28px;box-shadow:0 12px 36px rgba(229,50,45,0.08)">
+                <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:20px;border-bottom:1px solid var(--line);padding-bottom:14px">
+                    <div style="display:flex;align-items:center;gap:10px">
+                        <span class="chip r" style="font-size:12px;font-weight:900;padding:5px 12px">⚡ 5-MINUTE PITCH BOARD</span>
+                        <h2 style="font-size:20px;margin:0;color:var(--fg)">현업 기획자 발표용 5분 핵심 브리프 (One-Page Pitch)</h2>
+                    </div>
+                    <span style="font-size:13px;color:var(--mut);font-weight:500">※ 발표 시 이 4개 카드와 아래 시뮬레이터·유닛이코노믹스만 짚으면 5분이 완결됩니다.</span>
+                </div>
 
-</div></section>
+                <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+                    <!-- 1분: 문제 정의 -->
+                    <div style="background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:18px">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span style="font-size:11px;font-weight:800;color:var(--ac);letter-spacing:.05em">01. PROBLEM (1분)</span>
+                            <span class="chip" style="font-size:10px;padding:2px 8px">시장 결핍</span>
+                        </div>
+                        <h3 style="font-size:16px;margin-bottom:8px;color:var(--fg)">선발주자가 방치한 10만km CS 병목</h3>
+                        <p style="font-size:13px;line-height:1.6;color:var(--mut);margin:0">
+                            마이클은 볼트 고착·공임 시비 등 <b>현장 CS가 두려워 2만 원 쿠폰 장사로 후퇴</b>했습니다. 카싱크는 대기업이 비워둔 10만km 고단가 시장의 오프라인 분쟁을 정면 타깃팅합니다.
+                        </p>
+                    </div>
 
-<!-- 선발주자(마이클·카닥) 대비 카싱크 심층 전략 비교 분석 섹션 -->
-<section id="comparison"><div class="w">
-<div class="tag">AI Market Research &amp; Deep Strategy</div>
-<h2>선발주자(마이클·카닥)의 한계와<br><span style="color:var(--ac)">카싱크(CarSync)</span>의 구조적 솔루션 비교</h2>
-<p class="lead">🤖 <b>AI 모빌리티 전략 분석가 조사 리포트:</b> 오프라인 정비 현장 생리, 정비소 실마진, CS 방어 및 CAC 실증 데이터 벤치마크</p>
-<div style="display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);color:var(--mut);padding:8px 16px;border-radius:10px;font-size:13px;margin-bottom:20px;line-height:1.5">
-<span style="color:var(--ac);font-weight:800">🔍 AI 실증 분석 출처:</span> 국내 정비 플랫폼(마이클·카닥·공임나라) 공시 자료, 전국 카센터 정비 공임 표준 및 현장 인터뷰 데이터를 바탕으로 AI가 심층 교차 분석한 결과입니다.
-</div>
+                    <!-- 2분: 선제적 방어 -->
+                    <div style="background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:18px">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span style="font-size:11px;font-weight:800;color:#3b82f6;letter-spacing:.05em">02. DEFENSE (1분)</span>
+                            <span class="chip" style="font-size:10px;padding:2px 8px;background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe">코어 차별점</span>
+                        </div>
+                        <h3 style="font-size:16px;margin-bottom:8px;color:var(--fg)">UI는 마이클 같아도 백엔드는 완전 다름</h3>
+                        <p style="font-size:13px;line-height:1.6;color:var(--mut);margin:0">
+                            소비자 UI는 친숙하게 수용하되, 코어는 <b>[3중 감사 로그 + STOP &amp; HOLD + 파워트레인별 가변 룰 엔진]</b>입니다. 프론트가 아닌 ‘현장 통제 백엔드 OS’가 본질입니다.
+                        </p>
+                    </div>
 
-<!-- 1. 핵심 비즈니스 모델 & 운영 비교 매트릭스 -->
-<div class="table-wrap rv">
-<table class="comp-table">
-<thead>
-<tr>
-<th style="width:16%">비교 항목</th>
-<th style="width:28%">마이클 (구 마카롱)</th>
-<th style="width:26%">카닥 (Cardoc)</th>
-<th style="width:30%;background:var(--soft);color:var(--ac)">카싱크 (CarSync)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><b>타깃 영역</b></td>
-<td>5,000~10,000km 일상 경정비<br><small style="color:var(--mut)">(엔진오일, 타이어, 에어컨 필터)</small></td>
-<td>외장 사고 수리 중심<br><small style="color:var(--mut)">(판금·도색 역경매, 광택)</small></td>
-<td class="hl"><b>80,000~120,000km 고위험 7대 부품</b><br><small style="color:var(--fg)">(미션오일, 겉벨트세트, 로워암 등 선제 예방)</small></td>
-</tr>
-<tr>
-<td><b>객단가 &amp; 마진</b></td>
-<td>2~5만 원대 박리다매<br><small style="color:var(--mut)">(정비소 마진 1만 원대 저조, 업셀링 한계)</small></td>
-<td>50~150만 원 고단가<br><small style="color:var(--mut)">(단, 사고 발생 시에만 극히 비정기적 유입)</small></td>
-<td class="hl"><b>15~50만 원 확정형 고마진 패키지</b><br><small style="color:var(--fg)">(정비소 마진 6~15만 원 보장, 리프트 회전율 극대화)</small></td>
-</tr>
-<tr>
-<td><b>현장 돌발 변수<br>(볼트 고착·공임 시비)</b></td>
-<td>정비소-차주 간 직접 합의 방치<br><small style="color:var(--mut)">(CS 폭증 회피 위해 경정비만 취급)</small></td>
-<td>사고 견적 외 추가 파손 시 분쟁<br><small style="color:var(--mut)">(사후 과잉 청구 시비 노출)</small></td>
-<td class="hl"><b>현장 2-Track 프로토콜 구축</b><br><small style="color:var(--fg)">Track 1: 경미 변수 무상 케어 생색 리포트<br>Track 2: 중대 변수 10초 음성 + 타임스탬프 감사 로그</small></td>
-</tr>
-<tr>
-<td><b>부품 공급 체계</b></td>
-<td>정비소 자체 재고 or 사외품 의존<br><small style="color:var(--mut)">(당일 입고 시 부품 수급 딜레이 발생)</small></td>
-<td>공업사 자체 조달<br><small style="color:var(--mut)">(부품 품번 표준화 체계 부재)</small></td>
-<td class="hl"><b>D-2 사전 예약 ➔ 모비스 순정품 배송</b><br><small style="color:var(--fg)">(골목 카센터 창고 한계 극복, 당일 대기 0분 즉시 착수)</small></td>
-</tr>
-<tr>
-<td><b>유저 획득 (CAC)</b></td>
-<td>불특정 다수 퍼포먼스 마케팅<br><small style="color:var(--mut)">(CAC 3~5만 원, 멀쩡한 차주의 앱 삭제율 높음)</small></td>
-<td>사고 발생 시 검색/보험 유입<br><small style="color:var(--mut)">(예방 정비 생애주기 관리 불가)</small></td>
-<td class="hl"><b>중고차 인수 골든타임 무상점검권 (CAC = 0원)</b><br><small style="color:var(--fg)">(불안 극대화 시점 타깃, 제휴 상사 채널 독점 락인)</small></td>
-</tr>
-<tr>
-<td><b>결제 BM 누수 방어</b></td>
-<td>정찰제 결제 외 현장 추가 정비는<br>정비소 실물 카드 직거래 누수</td>
-<td>공업사 현장 결제 시<br>플랫폼 중개 수수료 통제 한계</td>
-<td class="hl"><b>모바일 청구서 + 인앱 간편결제 강제화</b><br><small style="color:var(--fg)">(6개월 품질보증 + 3% 적립 결합으로 현장 직거래 원천 차단)</small></td>
-</tr>
-</tbody>
-</table>
-</div>
+                    <!-- 3분: 핵심 프로덕트 솔루션 -->
+                    <div style="background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:18px">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span style="font-size:11px;font-weight:800;color:#10b981;letter-spacing:.05em">03. SOLUTION (1.5분)</span>
+                            <span class="chip" style="font-size:10px;padding:2px 8px;background:#ecfdf5;color:#059669;border-color:#a7f3d0">STOP &amp; HOLD</span>
+                        </div>
+                        <h3 style="font-size:16px;margin-bottom:8px;color:var(--fg)">기름 묻은 손 ➔ 10초 음성 ➔ 모바일 승인</h3>
+                        <p style="font-size:13px;line-height:1.6;color:var(--mut);margin:0">
+                            <b>사진 2장 + 10초 음성 녹음</b>만으로 AI 표준 리포트 생성, <b>차주 승인 전까지 작업을 일시 정지(HOLD)</b>하여 과잉 정비 시비와 환불 분쟁을 100% 원천 차단합니다.
+                        </p>
+                    </div>
 
-<!-- 2. 10년 차 수석 PM 관점 4대 핵심 전략 심층 평가 -->
-<div style="margin-top:32px">
-<h3 style="font-size:21px;margin-bottom:18px">🤖 AI가 교차 검증한 4대 핵심 전략 심층 평가 리포트 <span style="font-size:13px;color:var(--mut);font-weight:400">(AI Market Intelligence)</span></h3>
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px">
+                    <!-- 4분: 유닛 이코노믹스 & GTM -->
+                    <div style="background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:18px">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span style="font-size:11px;font-weight:800;color:#f59e0b;letter-spacing:.05em">04. IMPACT (1.5분)</span>
+                            <span class="chip" style="font-size:10px;padding:2px 8px;background:#fef3c7;color:#b45309;border-color:#fde68a">숫자로 증명</span>
+                        </div>
+                        <h3 style="font-size:16px;margin-bottom:8px;color:var(--fg)">객단가 10배 (35만 원) &amp; CAC 0원 락인</h3>
+                        <p style="font-size:13px;line-height:1.6;color:var(--mut);margin:0">
+                            정비소 <b>건당 순마진 6~15만 원 보장</b>으로 네트워크 락인, <b>중고차 상사 제휴 무상점검권으로 CAC=0원 유입</b> 및 <b>부품 재고 비용 0원(D-2)</b>을 달성했습니다.
+                        </p>
+                    </div>
+                </div>
 
-<!-- 평가 1: BM 및 정비소 상생 -->
-<div class="card rv" style="border-top:4px solid var(--ac)">
-<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
-<span class="chip r" style="font-size:12px;font-weight:700">심층 평가 1</span>
-<span style="font-size:12px;color:var(--mut)">BM &amp; 정비소 상생</span>
-</div>
-<h4 style="font-size:17px;margin-bottom:10px;color:var(--fg)">박리다매 정찰제 vs 10만km 묶음 선제 정비</h4>
-<p style="font-size:14px;line-height:1.7;margin-bottom:12px">
-<b>“카센터 사장님에게 2만 원짜리 엔진오일은 노동 착취에 가깝습니다.”</b><br>
-마이클의 2~3만 원대 정찰제는 리프트 점유 시간(30~40분) 대비 남는 마진이 1만 원 안팎이라, 사장님들은 추가 정비(업셀링)를 강요하지 않으면 손해를 보는 구조적 결함을 안고 있습니다.
-</p>
-<div style="background:var(--bg);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.6">
-💡 <b>카싱크의 구조적 우위:</b><br>
-- 8~12만km 7대 부품 묶음 정비로 <b>객단가 15~50만 원(순수 공임 마진 6~15만 원)</b> 확보<br>
-- 차주는 1년에 서너 번 갈 정비소를 단 1회 방문으로 해결하고, 정비소는 <b>2시간 작업으로 하루 목표 매출의 40% 이상을 안정 확보</b>하여 자발적 제휴 유인 극대화
-</div>
-</div>
+                <div style="margin-top:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:var(--bg);padding:14px 18px;border-radius:14px;border:1px dashed var(--line)">
+                    <span style="font-size:13px;color:var(--fg)"><b>🎙️ 5분 발표 요령:</b> 이 4개 카드를 1~2분 내로 브리핑한 뒤, 아래 시뮬레이터와 비즈니스 임팩트를 순서대로 클릭하여 보여주시면 됩니다.</span>
+                    <div style="display:flex;gap:8px">
+                        <a href="#field" class="btn" style="font-size:12px;padding:7px 16px">① 현장 시뮬레이터 보기 ↓</a>
+                        <a href="#model" class="btn" style="font-size:12px;padding:7px 16px;background:var(--card);color:var(--fg);border:1px solid var(--line)">② 비즈니스 임팩트 보기 ↓</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- 평가 2: 현장 운영 리스크 통제 -->
-<div class="card rv" style="border-top:4px solid #3b82f6">
-<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
-<span class="chip" style="background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe;font-size:12px;font-weight:700">심층 평가 2</span>
-<span style="font-size:12px;color:var(--mut)">현장 리스크 통제</span>
-</div>
-<h4 style="font-size:17px;margin-bottom:10px;color:var(--fg)">2-Track 프로토콜의 오프라인 현장 적합성</h4>
-<p style="font-size:14px;line-height:1.7;margin-bottom:12px">
-<b>“기존 플랫폼이 10만km를 기피한 진짜 이유는 CS 폭증 때문이었습니다.”</b><br>
-리프트 밑 염화칼슘 부식, 볼트 고착은 추가 공임 시비를 낳아 플랫폼을 비난의 화살받이로 만듭니다. 카싱크의 2-Track은 이 심리적 병목을 완벽히 분리했습니다.
-</p>
-<div style="background:var(--bg);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.6">
-⚙️ <b>현장 적합성 검증:</b><br>
-- <b>Track 1 (경미 변수 2~3만 원):</b> 추가 청구 대신 <b>‘무상 녹 제거 생색 리포트’</b>로 전환 ➔ 사장님 단골 형성 &amp; 차주 감동<br>
-- <b>Track 2 (중대 변수 수십만 원):</b> <b>‘정비사 10초 음성 + 타임스탬프 감사 로그(Stop &amp; Hold)’</b> ➔ 차주 모바일 원터치 승인 전까지 작업 중단, 과잉 정비 시비 100% 원천 차단
-</div>
-</div>
+    <section id="problem">
+        <div class="w">
+            <div class="tag">Problem Definition</div>
+            <h2>진짜 결핍은 5,000km 경정비가 아니라<br><span style="color:var(--ac)">100,000km 고위험 부품</span>에 있습니다</h2>
+            <div class="grid">
+                <div class="card hl rv">
+                    <h3>페르소나 실화 · 조복만 님</h3>
+                    <ul>
+                        <li>아반떼 AD, 고속도로 주행 중 변속 슬립 및 출력 저하로 주행 멈춤 위기</li>
+                        <li>갓길 정비소 긴급 입고 → 미션오일 산화 진단, 현장 결제 <b>170,000원</b></li>
+                        <li>고통: 엔진오일 외 핵심 소모품 사전 정보 부재, 낯선 정비소 견적 불안</li>
+                    </ul>
+                </div>
+                <div class="card rv">
+                    <h3>기존 플랫폼의 구조적 한계 (마이클·카닥)</h3>
+                    <ul>
+                        <li>20,000~30,000원대 단순 엔진오일 쿠폰 가격 경쟁에 매몰</li>
+                        <li>현장 변수와 공임 시비가 큰 100,000km 고위험 부품 영역 전면 방치</li>
+                    </ul>
+                </div>
+            </div>
 
-<!-- 평가 3: CAC 및 락인 관점 -->
-<div class="card rv" style="border-top:4px solid #10b981">
-<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
-<span class="chip" style="background:#ecfdf5;color:#059669;border-color:#a7f3d0;font-size:12px;font-weight:700">심층 평가 3</span>
-<span style="font-size:12px;color:var(--mut)">CAC &amp; 락인</span>
-</div>
-<h4 style="font-size:17px;margin-bottom:10px;color:var(--fg)">퍼포먼스 마케팅 vs 중고차 인수 시점 무상점검권</h4>
-<p style="font-size:14px;line-height:1.7;margin-bottom:12px">
-<b>“멀쩡히 달리는 차주에게 앱을 깔게 만드는 것은 가장 비싼 마케팅입니다.”</b><br>
-엔진오일 교체 주기는 1년에 한 번뿐이라 앱 설치 후 즉시 삭제됩니다. 반면 카싱크는 <b>‘중고차 인수 직후(8~12만km)’</b>라는 불안 극대화 골든타임을 독점합니다.
-</p>
-<div style="background:var(--bg);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.6">
-🎯 <b>GTM 실효성 분석:</b><br>
-- 중고차 매매 상사와 B2B 제휴로 <b>CAC = 0원 무상점검권 유입</b><br>
-- 점검 차주의 80% 이상이 노후 소모품 교체(15~50만 원)로 전환<br>
-- 첫 정밀 점검 데이터가 앱에 영구 아카이빙되어 <b>차량 매각 시까지 플랫폼 이탈 불가능한 락인</b> 형성
-</div>
-</div>
+            <!-- 선발 주자가 비워둔 10만km 영역 분석: PM 도메인 분석 관점 -->
+            <div class="card rv" style="margin-top:20px;border-left:4px solid var(--ac);background:var(--soft)">
+                <div
+                    style="font-size:12px;font-weight:800;color:var(--ac);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px">
+                    PM Domain Insight · 선발주자가 10만km를 기피한 이유와 PM의 해결책</div>
+                <h3 style="font-size:clamp(17px,2vw,22px);color:var(--fg);margin-bottom:12px;line-height:1.4">
+                    “마이클이나 카닥 같은 선발 주자들도 다 생각해 봤을 텐데, 왜 10만km 고위험 부품은 손을 안 댔을까?”
+                </h3>
+                <p style="font-size:16px;color:var(--fg);line-height:1.75;margin-bottom:10px">
+                    이유는 명확합니다. <b>‘현장 돌발 변수로 인한 CS 분쟁과 책임 공방을 감당할 수 없었기 때문’</b>입니다.
+                </p>
+                <p style="font-size:15px;line-height:1.75;color:var(--mut);margin-bottom:12px">
+                    리프트 밑에서 발생하는 염화칼슘 부식, 볼트 고착, 산소 불대 추가 공임은 기존 정찰제 앱이 통제할 수 없는 오프라인 암묵지 영역이었습니다. 그래서 선발주자들은 CS 리스크를 회피하고 2~3만 원짜리 엔진오일 쿠폰 모델에 머물렀습니다.
+                </p>
+                <div
+                    style="background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-top:8px">
+                    <p style="font-size:15px;line-height:1.7;margin:0;color:var(--fg)">
+                        PM으로서 저는 이 오프라인 병목을 회피하는 대신, <b>[정비사 10초 음성 리포트 + 3중 타임스탬프 감사 로그 + 차주 모바일 원터치 사전 승인(STOP &amp; HOLD)]</b>이라는 백엔드 프로토콜 아키텍처로 정면 돌파했습니다.<br>
+                        <b style="color:var(--ac);display:inline-block;margin-top:4px">“선발주자가 CS 분쟁 리스크로 비워둔 10만km 고단가 시장의 진입 장벽을, PM의 현장 도메인 프로세스 설계를 통해 비즈니스 기회로 전환했습니다.”</b>
+                    </p>
+                </div>
+            </div>
 
-<!-- 평가 4: 현업 PM 관점의 맹점 2가지 & 실전 해결책 -->
-<div class="card rv" style="border-top:4px solid #f59e0b">
-<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
-<span class="chip" style="background:#fef3c7;color:#b45309;border-color:#fde68a;font-size:12px;font-weight:700">심층 평가 4</span>
-<span style="font-size:12px;color:var(--mut)">맹점 2가지 &amp; 솔루션</span>
-</div>
-<h4 style="font-size:17px;margin-bottom:10px;color:var(--fg)">실전 런칭 시 Blind Spots &amp; 실행 솔루션</h4>
-<p style="font-size:14px;line-height:1.7;margin-bottom:12px">
-<b>“현장의 마찰(Friction)을 고려하지 않는 기획은 현장에서 즉사합니다.”</b><br>
-카싱크 런칭 시 직면할 2대 잠재적 허점과 이를 방어할 PM의 실전 솔루션입니다.
-</p>
-<div style="background:var(--bg);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.6">
-🛡️ <b>Blind Spot 1 (정비소의 무상 작업 반발 &amp; 음성 녹취 귀찮음):</b><br>
-➔ <b>해결책:</b> 플랫폼이 침투방청제·케어 소모품을 전액 무상 제공하고, 10초 음성 등록 시 <b>정비사에게 건당 3,000~5,000원 즉시 캐시백</b>을 지급하여 행동 경제학적 유인 완성.<br><br>
-🛡️ <b>Blind Spot 2 (중고차 상사의 제휴 인센티브 약화 및 하자 시비 전가 우려):</b><br>
-➔ <b>해결책:</b> 상사에게 "사후 하자 민원 방패(전문 정비소 안심 진단서)" 가치를 제공하고, 점검 차주의 <b>유상 수리 전환 시 딜러에게 수수료 3~5% 쉐어</b>로 강력한 영업 제휴 락인.
-</div>
-</div>
+        </div>
+    </section>
 
-</div>
-</div>
+    <!-- 선발주자(마이클·카닥) 대비 카싱크 심층 전략 비교 분석 섹션 -->
+    <section id="comparison">
+        <div class="w">
+            <div class="tag">Competitive Architecture &amp; Core Defense</div>
+            <h2>선발주자(마이클·카닥)의 한계와<br><span style="color:var(--ac)">카싱크(CarSync)</span>의 백엔드 아키텍처 비교</h2>
+            <p class="lead">오프라인 정비 현장 생리, 정비소 실마진, 분쟁 방어 감사 로그 및 CAC 실증 데이터 벤치마크</p>
 
-</div></section>
+            <!-- 마이클과의 유사성에 대한 선제적 방어 박스 -->
+            <div class="card rv" style="margin-bottom:24px;border-left:4px solid var(--ac);background:var(--soft)">
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+                    <span class="chip r" style="font-size:11px;font-weight:800;padding:4px 10px">선제적 방어 · Pre-emptive Defense</span>
+                    <strong style="color:var(--fg);font-size:15px">“소비자 화면(UI)이 마이클과 유사하지 않나요?”에 대한 PM의 답변</strong>
+                </div>
+                <p style="font-size:15px;line-height:1.75;color:var(--fg);margin-bottom:10px">
+                    차량 번호 입력, 부품 주기 확인 등 <b>소비자 화면(UI)은 익숙한 사용자 멘탈 모델을 수용하여 마이클과 유사할 수 있습니다.</b><br>
+                    그러나 본 기획의 진짜 코어는 겉면 UI가 아닌 <b>‘현장의 백엔드(3중 감사 로그, STOP &amp; HOLD, 파워트레인별 가변 룰 엔진)’</b>에 있습니다.
+                </p>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:12px">
+                    <div style="background:var(--card);padding:12px 14px;border-radius:10px;border:1px solid var(--line);font-size:13px;line-height:1.6">
+                        <b style="color:var(--ac)">① 3중 감사 로그 &amp; STOP &amp; HOLD:</b><br>기름 묻은 손으로 10초 음성 소견 ➔ AI 표준화 ➔ 차주 모바일 승인 전 작업 중단(분쟁 100% 차단)
+                    </div>
+                    <div style="background:var(--card);padding:12px 14px;border-radius:10px;border:1px solid var(--line);font-size:13px;line-height:1.6">
+                        <b style="color:var(--ac)">② 파워트레인별 가변 룰 엔진:</b><br>내연기관 8~10만km, 하이브리드 회생제동·인버터 냉각수, EV 감속기 오일 등 동력원별 가변 주기 알고리즘
+                    </div>
+                    <div style="background:var(--card);padding:12px 14px;border-radius:10px;border:1px solid var(--line);font-size:13px;line-height:1.6">
+                        <b style="color:var(--ac)">③ D-2 사전 부품 에스크로 SCM:</b><br>예약금 10,000원 기반 리프트 공실 방어 및 모비스 순정품 당일 직배송으로 대기 0분 달성
+                    </div>
+                </div>
+            </div>
 
-<section id="solution"><div class="w">
-<div class="tag">Solution &amp; Operation</div>
-<h2>7대 고위험 부품 타깃팅 &amp;<br>D-2 사전 부품 수급 시스템</h2>
-<div class="chips"><span class="chip r">미션오일</span><span class="chip r">구동 겉벨트 세트</span><span class="chip r">냉각수/부동액</span><span class="chip r">로워암 부싱</span><span class="chip r">브레이크 패드/오일</span><span class="chip r">점화플러그</span></div>
-<div class="grid">
-<div class="card rv"><h3>D-2 사전 예약 강제화</h3><p>골목 정비소의 협소한 부품 적재 한계 극복</p>
-<div class="flow"><span class="chip">정비 2일 전 예약</span><i>➔</i><span class="chip">모비스 순정품 사전 배송</span><i>➔</i><span class="chip">당일 즉시 작업</span></div><p><b>대기 시간 0분</b></p></div>
-<div class="card rv"><h3>노쇼 방지 예약금 10,000원</h3><p>정비 완료 시 실결제액에서 10,000원 차감 정산. 정비소의 리프트 공실 손실을 방어합니다.</p></div>
-</div></div></section>
+            <!-- 1. 핵심 비즈니스 모델 & 운영 비교 매트릭스 -->
+            <div class="table-wrap rv">
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th style="width:16%">비교 항목</th>
+                            <th style="width:28%">마이클 (구 마카롱)</th>
+                            <th style="width:26%">카닥 (Cardoc)</th>
+                            <th style="width:30%;background:var(--soft);color:var(--ac)">카싱크 (CarSync)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>핵심 코어 아키텍처</b></td>
+                            <td>프론트엔드 중심 정찰제 예약 UI<br><small style="color:var(--mut)">(오프라인 현장 변수 통제 부재)</small></td>
+                            <td>외장 수리 견적 역경매 UI<br><small style="color:var(--mut)">(사고 수리 후속 분쟁 노출)</small></td>
+                            <td class="hl"><b>현장 백엔드 감사 OS</b><br><small style="color:var(--fg)">(3중 감사 로그, STOP &amp; HOLD, 가변 룰 엔진)</small></td>
+                        </tr>
+                        <tr>
+                            <td><b>타깃 영역</b></td>
+                            <td>5,000~10,000km 일상 경정비<br><small style="color:var(--mut)">(엔진오일, 타이어, 에어컨 필터)</small></td>
+                            <td>외장 사고 수리 중심<br><small style="color:var(--mut)">(판금·도색 역경매, 광택)</small></td>
+                            <td class="hl"><b>80,000~120,000km 고위험 7대 부품</b><br><small style="color:var(--fg)">(파워트레인별 가변 주기 선제 예방 정비)</small></td>
+                        </tr>
+                        <tr>
+                            <td><b>객단가 &amp; 마진</b></td>
+                            <td>2~5만 원대 박리다매<br><small style="color:var(--mut)">(정비소 마진 1만 원대 저조, 업셀링 한계)</small></td>
+                            <td>50~150만 원 고단가<br><small style="color:var(--mut)">(단, 사고 발생 시에만 극히 비정기적 유입)</small></td>
+                            <td class="hl"><b>15~50만 원 확정형 고마진 패키지</b><br><small style="color:var(--fg)">(정비소 마진 6~15만 원 보장, 리프트 회전율 극대화)</small></td>
+                        </tr>
+                        <tr>
+                            <td><b>현장 돌발 변수<br>(볼트 고착·공임 시비)</b></td>
+                            <td>정비소-차주 간 직접 합의 방치<br><small style="color:var(--mut)">(CS 폭증 회피 위해 경정비만 취급)</small></td>
+                            <td>사고 견적 외 추가 파손 시 분쟁<br><small style="color:var(--mut)">(사후 과잉 청구 시비 노출)</small></td>
+                            <td class="hl"><b>현장 2-Track &amp; STOP &amp; HOLD</b><br><small style="color:var(--fg)">Track 1: 경미 변수 무상 케어 생색 리포트<br>Track 2: 10초 음성 + 타임스탬프 승인 전 정지</small></td>
+                        </tr>
+                        <tr>
+                            <td><b>부품 공급 체계</b></td>
+                            <td>정비소 자체 재고 or 사외품 의존<br><small style="color:var(--mut)">(당일 입고 시 부품 수급 딜레이 발생)</small></td>
+                            <td>공업사 자체 조달<br><small style="color:var(--mut)">(부품 품번 표준화 체계 부재)</small></td>
+                            <td class="hl"><b>D-2 사전 예약 ➔ 모비스 순정품 배송</b><br><small style="color:var(--fg)">(골목 카센터 창고 한계 극복, 당일 대기 0분 즉시 착수)</small></td>
+                        </tr>
+                        <tr>
+                            <td><b>유저 획득 (CAC)</b></td>
+                            <td>불특정 다수 퍼포먼스 마케팅<br><small style="color:var(--mut)">(CAC 3~5만 원, 멀쩡한 차주의 앱 삭제율 높음)</small></td>
+                            <td>사고 발생 시 검색/보험 유입<br><small style="color:var(--mut)">(예방 정비 생애주기 관리 불가)</small></td>
+                            <td class="hl"><b>중고차 인수 골든타임 무상점검권 (CAC = 0원)</b><br><small style="color:var(--fg)">(불안 극대화 시점 타깃, 제휴 상사 채널 독점 락인)</small></td>
+                        </tr>
+                        <tr>
+                            <td><b>결제 BM 누수 방어</b></td>
+                            <td>정찰제 결제 외 현장 추가 정비는<br>정비소 실물 카드 직거래 누수</td>
+                            <td>공업사 현장 결제 시<br>플랫폼 중개 수수료 통제 한계</td>
+                            <td class="hl"><b>모바일 청구서 + 인앱 간편결제 강제화</b><br><small style="color:var(--fg)">(6개월 품질보증 + 3% 적립 결합으로 현장 직거래 원천 차단)</small></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-<section id="mvp"><div class="w">
-<div class="tag">Core MVP 1 · Lightweight Rule-Based UX</div>
-<h2>비용 0원 룰 베이스 문진 &amp;<br>감각 퀵 인터랙션</h2>
-<div class="chips"><span class="chip">변속할 때 쿵 충격</span><span class="chip">방지턱 넘을 때 찌그덕</span><span class="chip">달콤한 한약 냄새</span><span class="chip">에어컨 켤 때 삐걱 소리</span></div>
-<div class="stats"><div class="card rv"><div class="big">0원</div><p>외부 LLM API 호출 비용</p></div><div class="card rv"><div class="big">0.01초</div><p>JSON 룰 매핑 지연시간</p></div><div class="card rv"><div class="big">200~400만</div><p>방치 시 미션 통교체 경고</p></div></div>
-<div class="grid">
-<div class="card rv"><h3>AI 정밀 분석 리포트</h3>
-<ul><li><b>기전 분석:</b> 점도 저하 및 슬러지의 밸브바디 유입 메커니즘</li>
-<li><b>고속도로 위험:</b> 합류 구간 가속 불능 사고 위험 고지</li>
-<li><b>손실 회피 앵커링:</b> 미션 통교체(앗세이) 경고로 정비 예약 유도</li></ul></div>
-<div class="card rv"><h3>법적 리스크 통제</h3><p>화면 하단 면책 명시: “정비 금액은 정비소 현장 실차 점검 후 최종 확정됩니다”</p></div>
-</div></div></section>
+            <!-- 2. 모빌리티 AX PM 관점 4대 핵심 전략 아키텍처 요약 -->
+            <div style="margin-top:28px">
+                <h3 style="font-size:18px;margin-bottom:14px">💡 PM 핵심 전략 아키텍처 실효성 요약</h3>
+                <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px">
 
-<section id="field"><div class="w">
-<div class="tag">Core MVP 2 · Field Issue Automation</div>
-<h2>현장 돌발 변수 즉시 대응:<br>원터치 사진·음성 &amp; 모바일 승인</h2>
-<div class="card hl rv" style="margin-bottom:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
-<div style="flex:1;min-width:280px">
-<h3 style="font-size:19px;margin-bottom:6px">기름 묻은 손으로 타이핑 없이, 즉시 스마트폰으로 정제된 선택지를 전송</h3>
-<p style="margin:0">정비 중 돌발 변수 발생 시 리프트 공실을 방어하고, 차주는 모바일 원클릭 승인으로 과잉 정비 시비를 100% 차단합니다.</p>
-</div>
-<div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
-<a href="#simulator" class="btn" style="background:var(--card);color:var(--fg);border:1px solid var(--line);font-size:13px;padding:9px 18px">⬇ 아래에서 직접 체험</a>
-<a href="2.html" target="_blank" rel="noopener noreferrer" class="btn" style="box-shadow:0 4px 14px rgba(229,50,45,0.25);font-size:13px;padding:9px 18px">🎮 새 창으로 열기 ↗</a>
-</div>
-</div>
+                    <!-- 평가 1: BM 및 정비소 상생 -->
+                    <div class="card rv" style="border-top:3px solid var(--ac);padding:18px">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span class="chip r" style="font-size:11px;font-weight:700;padding:2px 8px">전략 1</span>
+                            <span style="font-size:11px;color:var(--mut)">BM &amp; 정비소 상생</span>
+                        </div>
+                        <h4 style="font-size:15px;margin-bottom:8px;color:var(--fg)">박리다매 vs 10만km 묶음 정비</h4>
+                        <ul style="font-size:13px;line-height:1.6;margin:0;padding-left:16px;color:var(--fg)">
+                            <li>마이클의 2만 원 쿠폰은 정비소 마진 1만 원 미만으로 추가 정비(업셀링) 강요 유발</li>
+                            <li>카싱크는 7대 부품 묶음으로 <b>객단가 15~35만 원 &amp; 건당 공임 마진 6~15만 원</b>을 보장해 공급자 락인</li>
+                        </ul>
+                    </div>
 
-<!-- 3-Step Visual Protocol Grid -->
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-bottom:28px">
+                    <!-- 평가 2: 현장 운영 리스크 통제 -->
+                    <div class="card rv" style="border-top:3px solid #3b82f6;padding:18px">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span class="chip" style="background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe;font-size:11px;font-weight:700;padding:2px 8px">전략 2</span>
+                            <span style="font-size:11px;color:var(--mut)">현장 리스크 통제</span>
+                        </div>
+                        <h4 style="font-size:15px;margin-bottom:8px;color:var(--fg)">2-Track &amp; STOP &amp; HOLD</h4>
+                        <ul style="font-size:13px;line-height:1.6;margin:0;padding-left:16px;color:var(--fg)">
+                            <li>경미 변수(2~3만 원): 추가 청구 대신 <b>‘무상 녹 제거 생색 리포트’</b>로 고객 감동 전환</li>
+                            <li>중대 변수: <b>10초 음성 소견 ➔ 차주 모바일 승인 전까지 작업 정지(STOP &amp; HOLD)</b>로 CS 시비 원천 차단</li>
+                        </ul>
+                    </div>
 
-<div class="card rv" style="border-top:4px solid var(--ac);display:flex;flex-direction:column;gap:14px;background:var(--card)">
-<div>
-<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-<span class="chip r" style="font-weight:700">STEP 1 · 정비사 현장</span>
-<span style="font-size:12px;color:var(--mut)">원터치 캡처</span>
-</div>
-<h3 style="font-size:18px;color:var(--fg);margin-bottom:6px">사진 2장 + 10초 음성 소견</h3>
-<p style="font-size:13px;color:var(--mut);margin:0">기름 묻은 장갑을 벗을 필요 없이, 파손 부위 촬영과 간편 음성 녹음만으로 접수</p>
-</div>
-<div style="background:var(--bg);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.6">
-📸 <b>사진 2장:</b> 너클 크랙 &amp; 부싱 파손 실차 자동 포커싱<br>
-🎙️ <b>10초 음성:</b> “너클 미세 크랙 발생, 옵션 선택 필요”
-</div>
-</div>
+                    <!-- 평가 3: CAC 및 락인 관점 -->
+                    <div class="card rv" style="border-top:3px solid #10b981;padding:18px">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span class="chip" style="background:#ecfdf5;color:#059669;border-color:#a7f3d0;font-size:11px;font-weight:700;padding:2px 8px">전략 3</span>
+                            <span style="font-size:11px;color:var(--mut)">CAC &amp; 락인</span>
+                        </div>
+                        <h4 style="font-size:15px;margin-bottom:8px;color:var(--fg)">퍼포먼스 vs 중고차 골든타임</h4>
+                        <ul style="font-size:13px;line-height:1.6;margin:0;padding-left:16px;color:var(--fg)">
+                            <li>엔진오일 차주는 앱 즉시 삭제 ➔ 불안 극대화 시점인 <b>‘중고차 인수 직후(8~12만km)’</b> 독점 타깃</li>
+                            <li>매매 상사 B2B 제휴로 <b>CAC = 0원 무상점검 유입</b>, 첫 점검 데이터 영구 아카이빙으로 이탈 방지</li>
+                        </ul>
+                    </div>
 
-<div class="card rv" style="border-top:4px solid #3b82f6;display:flex;flex-direction:column;gap:14px;background:var(--card)">
-<div>
-<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-<span class="chip" style="background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe;font-weight:700">STEP 2 · AI 시스템</span>
-<span style="font-size:12px;color:var(--mut)">실시간 정제</span>
-</div>
-<h3 style="font-size:18px;color:var(--fg);margin-bottom:6px">표준 안내문 &amp; 알림톡 자동 생성</h3>
-<p style="font-size:13px;color:var(--mut);margin:0">정비사의 거친 음성을 고객 친화적인 표준 기술 소견으로 즉시 정제</p>
-</div>
-<div style="background:var(--bg);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.6">
-⚡ <b>실시간 STT:</b> 음성 ➔ 텍스트 및 요약 변환<br>
-📲 <b>카카오 알림톡:</b> 차주 스마트폰으로 선택지 즉시 발송
-</div>
-</div>
+                    <!-- 평가 4: 현업 PM 관점의 맹점 2가지 & 실전 해결책 -->
+                    <div class="card rv" style="border-top:3px solid #f59e0b;padding:18px">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span class="chip" style="background:#fef3c7;color:#b45309;border-color:#fde68a;font-size:11px;font-weight:700;padding:2px 8px">전략 4</span>
+                            <span style="font-size:11px;color:var(--mut)">현장 마찰 대응책</span>
+                        </div>
+                        <h4 style="font-size:15px;margin-bottom:8px;color:var(--fg)">오프라인 2대 Friction 대응</h4>
+                        <ul style="font-size:13px;line-height:1.6;margin:0;padding-left:16px;color:var(--fg)">
+                            <li><b>정비사 음성 녹취 귀찮음:</b> 10초 음성 등록 시 <b>건당 3,000~5,000원 즉시 캐시백</b> 행동 경제학적 유인</li>
+                            <li><b>상사 제휴 유인:</b> 사후 하자 민원 방패(안심 진단서) 제공 &amp; <b>유상 전환 시 수수료 3~5% 쉐어</b></li>
+                        </ul>
+                    </div>
 
-<div class="card rv" style="border-top:4px solid #10b981;display:flex;flex-direction:column;gap:14px;background:var(--card)">
-<div>
-<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-<span class="chip" style="background:#ecfdf5;color:#059669;border-color:#a7f3d0;font-weight:700">STEP 3 · 차주 모바일</span>
-<span style="font-size:12px;color:var(--mut)">투명한 결정</span>
-</div>
-<h3 style="font-size:18px;color:var(--fg);margin-bottom:6px">옵션 A / 옵션 B 원클릭 승인</h3>
-<p style="font-size:13px;color:var(--mut);margin:0">차주가 직접 사진/음성을 확인하고 강요 없이 자발적 선택</p>
-</div>
-<div style="background:var(--bg);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.6">
-🚗 <b>옵션 A (0원):</b> 추가 없이 기본 작업 후 안전 하차<br>
-🔧 <b>옵션 B (+18만):</b> 정품 부품 발주 및 정밀 수리 승인
-</div>
-</div>
+                </div>
+            </div>
 
-</div>
+                </div>
+            </div>
 
-<!-- Interactive Simulator Live View -->
-<div id="simulator" class="card rv" style="margin-top:24px;padding:0;overflow:hidden;border:1px solid var(--line);background:var(--card);border-radius:20px;box-shadow:0 12px 36px rgba(0,0,0,0.12)">
-<div style="padding:16px 22px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;background:color-mix(in srgb,var(--bg) 95%,#000)">
-<div>
-<span style="font-size:11px;font-weight:800;color:var(--ac);letter-spacing:.08em;text-transform:uppercase">Interactive UI Experience</span>
-<h3 style="font-size:17px;margin:2px 0 0;display:flex;align-items:center;gap:8px">
-<span>🎮 원터치 사진·음성 &amp; 모바일 승인 실시간 시뮬레이터</span>
-</h3>
-</div>
-<div style="display:flex;gap:10px;align-items:center">
-<a href="2.html" target="_blank" rel="noopener noreferrer" class="btn" style="font-size:13px;padding:8px 18px;box-shadow:0 2px 10px rgba(229,50,45,0.25)">
-새 창으로 전체화면 열기 ↗
-</a>
-</div>
-</div>
-<div style="position:relative;width:100%;height:960px;background:#0f172a">
-<iframe src="2.html" title="원터치 사진·음성 & 모바일 승인 시뮬레이터" style="width:100%;height:100%;border:none;display:block" loading="lazy"></iframe>
-</div>
-</div>
+        </div>
+    </section>
 
-</div></section>
+    <section id="solution">
+        <div class="w">
+            <div class="tag">System Architecture 1 · Parts &amp; Supply Chain</div>
+            <h2>10만km 7대 부품 &amp; 파워트레인별 가변 주기<br>D-2 사전 부품 수급 시스템</h2>
+            <div class="chips">
+                <span class="chip r">미션오일</span><span class="chip r">구동 겉벨트 세트</span><span class="chip r">냉각수/부동액</span>
+                <span class="chip r">로워암 부싱</span><span class="chip r">브레이크 패드/오일</span><span class="chip r">점화플러그/코일</span>
+                <span class="chip r">연료필터 / 절연냉각수</span>
+            </div>
+            <div class="grid">
+                <div class="card rv">
+                    <h3>파워트레인별 가변 주기 룰 엔진</h3>
+                    <p style="font-size:14px;line-height:1.65;margin-bottom:10px">동일 주행거리라도 파워트레인별 구동 부하와 특성에 따라 점검 주기를 동적으로 가변 조정합니다.</p>
+                    <ul style="font-size:13px;line-height:1.6;margin:0;padding-left:16px;color:var(--fg)">
+                        <li><b>내연기관 (가솔린/디젤):</b> 8~10만km 미션오일, 겉벨트, 흡기/연료라인 집중 점검</li>
+                        <li><b>하이브리드 (HEV):</b> 회생제동 연계 브레이크 패드 주기 12만km 연장, 인버터 전용 냉각수 분리 점검</li>
+                        <li><b>전기차 (EV):</b> 감속기 오일 및 저전도성 절연 냉각수 전용 가변 룰 매핑</li>
+                    </ul>
+                </div>
+                <div class="card rv">
+                    <h3>D-2 사전 예약 강제화 SCM</h3>
+                    <p style="font-size:14px;line-height:1.65;margin-bottom:8px">골목 정비소의 협소한 부품 적재 창고 한계를 극복하는 JIT(Just-In-Time) 직배송 모델</p>
+                    <div class="flow"><span class="chip">정비 2일 전 예약</span><i>➔</i><span class="chip">모비스 순정품 사전 배송</span><i>➔</i><span class="chip">당일 즉시 작업</span></div>
+                    <p><b>입고 즉시 착수 · 대기 시간 0분 달성</b></p>
+                </div>
+                <div class="card rv">
+                    <h3>노쇼 방지 예약금 10,000원 에스크로</h3>
+                    <p style="font-size:14px;line-height:1.65;margin-bottom:10px">차주의 무단 노쇼로 인한 정비소의 리프트 공실 손실을 원천 방어합니다.</p>
+                    <div style="background:var(--bg);padding:10px 14px;border-radius:10px;border:1px solid var(--line);font-size:13px;line-height:1.6">
+                        🔒 <b>에스크로 정산:</b> 예약 확정 시 10,000원 결제 ➔ 정비 완료 시 현장 실결제 총액에서 10,000원 자동 차감 정산
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="offline"><div class="w">
-<div class="tag">Offline Resilience</div>
-<h2>오프라인 실물 카드 결제 누락을 막는<br>3중 인센티브 아키텍처</h2>
-<div class="card hl rv" style="margin-bottom:16px"><h3>핵심 리스크</h3><p>현장 실물 결제를 방치하면 차주-정비소 간 직거래로 플랫폼 수수료(BM)가 통째로 증발합니다.</p></div>
-<div class="grid">
-<div class="card rv"><h3>① 사장님 모바일 출고 청구서 발송</h3><p>정비 완료 후 최종 작업 내역 확정 ➔ 차주 앱으로 '정비 완료 모바일 청구서' 즉시 전송 및 주행거리 0km 리셋 동기화</p></div>
-<div class="card rv"><h3>② 카카오페이 / 토스페이 원터치 결제 (수수료 BM 핵심)</h3><p>차주는 현장 단말기 대신 카카오페이·토스페이로 3초 결제 ➔ 플랫폼 결제 수수료 확보 및 작업 데이터 영구 박제 (3% 즉시 할인/적립 혜택으로 현장 카드 결제 유인 원천 차단)</p></div>
-<div class="card rv"><h3>③ 현장 실물 결제 누락 방지 (Fall-back Safety)</h3><p>불가피하게 현장 단말기/현금 결제 시: 사장님 정산용 승인 번호 대조 또는 결제 내역 캡처 승인으로 데이터 유실 최종 방어</p></div>
-</div></div></section>
+    <section id="mvp">
+        <div class="w">
+            <div class="tag">System Architecture 2 · Lightweight Rule-Based Engine</div>
+            <h2>비용 0원 룰 베이스 문진 엔진 &amp;<br>파워트레인 동적 가변 매핑</h2>
+            <div class="chips"><span class="chip">변속할 때 쿵 충격</span><span class="chip">방지턱 넘을 때 찌그덕</span><span
+                    class="chip">달콤한 한약 냄새</span><span class="chip">에어컨 켤 때 삐걱 소리</span></div>
+            <div class="stats">
+                <div class="card rv">
+                    <div class="big">0원</div>
+                    <p>외부 LLM API 호출 비용</p>
+                </div>
+                <div class="card rv">
+                    <div class="big">0.01초</div>
+                    <p>JSON 룰 매핑 지연시간</p>
+                </div>
+                <div class="card rv">
+                    <div class="big">200~400만</div>
+                    <p>방치 시 미션 통교체 경고</p>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="card rv">
+                    <h3>AI 정밀 분석 리포트</h3>
+                    <ul>
+                        <li><b>기전 분석:</b> 점도 저하 및 슬러지의 밸브바디 유입 메커니즘</li>
+                        <li><b>고속도로 위험:</b> 합류 구간 가속 불능 사고 위험 고지</li>
+                        <li><b>손실 회피 앵커링:</b> 미션 통교체(앗세이) 경고로 정비 예약 유도</li>
+                    </ul>
+                </div>
+                <div class="card rv">
+                    <h3>법적 리스크 통제</h3>
+                    <p>화면 하단 면책 명시: “정비 금액은 정비소 현장 실차 점검 후 최종 확정됩니다”</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="gtm"><div class="w">
-<div class="tag">GTM &amp; User Acquisition (CAC) Strategy</div>
-<h2>중고차 연계 무상점검 락인 모델:<br><span style="color:var(--ac)">CAC 누수 제로화 &amp; 생애주기 독점</span></h2>
+    <section id="field">
+        <div class="w">
+            <div class="tag">System Architecture 3 · Field Dispute Prevention (Audit Log)</div>
+            <h2>현장 돌발 변수 원천 차단 아키텍처:<br>3중 감사 로그 &amp; STOP &amp; HOLD 프로세스</h2>
+            <div class="card hl rv"
+                style="margin-bottom:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px">
+                <div style="flex:1;min-width:280px">
+                    <h3 style="font-size:19px;margin-bottom:6px">기름 묻은 손으로 타이핑 없이, [사진 2장 + 10초 음성] 기반 모바일 원클릭 승인</h3>
+                    <p style="margin:0">정비 중 돌발 변수 발생 시 리프트 공실을 방어하고, 차주 승인 전까지 작업을 멈추는 <b>STOP &amp; HOLD 프로토콜</b>로 과잉 정비 시비와 CS 분쟁을 100% 원천 차단합니다.</p>
+                </div>
+                <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+                    <a href="#simulator" class="btn"
+                        style="background:var(--card);color:var(--fg);border:1px solid var(--line);font-size:13px;padding:9px 18px">⬇
+                        아래에서 직접 체험</a>
+                    <a href="2.html" target="_blank" rel="noopener noreferrer" class="btn"
+                        style="box-shadow:0 4px 14px rgba(229,50,45,0.25);font-size:13px;padding:9px 18px">🎮 새 창으로 열기
+                        ↗</a>
+                </div>
+            </div>
 
-<!-- 1. 문제 제기 -->
-<div class="grid" style="margin-bottom:24px">
-<div class="card rv" style="border-left:4px solid var(--mut)">
-<div style="font-size:12px;font-weight:700;color:var(--mut);letter-spacing:.05em;margin-bottom:6px">기존 정비 앱의 치명적 한계</div>
-<h3 style="font-size:18px">일반 차주의 무반응 (마케팅비 누수)</h3>
-<p>멀쩡히 차를 잘 타고 있는 운전자에게 메타/인스타 광고로 <i>“예방 정비 앱 까세요”</i>라고 외치면 유저 획득 비용(CAC)만 수만 원씩 타들어가고 앱은 방치·삭제됩니다.</p>
-</div>
-<div class="card hl rv" style="border-left:4px solid var(--ac)">
-<div style="font-size:12px;font-weight:700;color:var(--ac);letter-spacing:.05em;margin-bottom:6px">카싱크의 타깃 인사이트</div>
-<h3 style="font-size:18px">진짜 타깃 시점의 부재 (골든타임)</h3>
-<p>정비 플랫폼이 유저를 낚아채야 하는 최적의 골든타임은 차주의 불안과 의구심이 극에 달해 있는 <b>‘중고차 인수 직후’</b> 단 한 순간입니다.</p>
-</div>
-</div>
+            <!-- 3-Step Visual Protocol Grid -->
+            <div class="grid"
+                style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-bottom:28px">
 
-<!-- 2. 핵심 메커니즘 플로우 -->
-<div class="card rv" style="margin-bottom:24px;background:var(--card)">
-<h3 style="font-size:19px;margin-bottom:14px">유저 획득 핵심 메커니즘 (중고차 B2B2C 무상점검 패키지)</h3>
-<div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+                <div class="card rv"
+                    style="border-top:4px solid var(--ac);display:flex;flex-direction:column;gap:14px;background:var(--card)">
+                    <div>
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span class="chip r" style="font-weight:700">STEP 1 · 정비사 현장</span>
+                            <span style="font-size:12px;color:var(--mut)">원터치 캡처</span>
+                        </div>
+                        <h3 style="font-size:18px;color:var(--fg);margin-bottom:6px">사진 2장 + 10초 음성 소견</h3>
+                        <p style="font-size:13px;color:var(--mut);margin:0">기름 묻은 장갑을 벗을 필요 없이, 파손 부위 촬영과 간편 음성 녹음만으로 접수
+                        </p>
+                    </div>
+                    <div
+                        style="background:var(--bg);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.6">
+                        📸 <b>사진 2장:</b> 너클 크랙 &amp; 부싱 파손 실차 자동 포커싱<br>
+                        🎙️ <b>10초 음성:</b> “너클 미세 크랙 발생, 옵션 선택 필요”
+                    </div>
+                </div>
 
-<div style="background:var(--bg);padding:16px;border-radius:14px;border:1px solid var(--line);position:relative">
-<span class="chip" style="font-size:11px;padding:4px 10px;margin-bottom:8px;display:inline-block">STEP 1 · B2B 파트너십</span>
-<h4 style="font-size:15px;margin-bottom:6px;color:var(--fg)">중고차 매매 상사 / 플랫폼</h4>
-<p style="font-size:13px;margin:0">헤이딜러, 케이카, 엔카 등과 제휴하여 차량 인수 시 <b>‘안심 출고 혜택’</b>으로 점검 패키지 지급</p>
-</div>
+                <div class="card rv"
+                    style="border-top:4px solid #3b82f6;display:flex;flex-direction:column;gap:14px;background:var(--card)">
+                    <div>
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span class="chip"
+                                style="background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe;font-weight:700">STEP 2 ·
+                                AI 시스템</span>
+                            <span style="font-size:12px;color:var(--mut)">실시간 정제</span>
+                        </div>
+                        <h3 style="font-size:18px;color:var(--fg);margin-bottom:6px">표준 안내문 &amp; 알림톡 자동 생성</h3>
+                        <p style="font-size:13px;color:var(--mut);margin:0">정비사의 거친 음성을 고객 친화적인 표준 기술 소견으로 즉시 정제</p>
+                    </div>
+                    <div
+                        style="background:var(--bg);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.6">
+                        ⚡ <b>실시간 STT:</b> 음성 ➔ 텍스트 및 요약 변환<br>
+                        📲 <b>카카오 알림톡:</b> 차주 스마트폰으로 선택지 즉시 발송
+                    </div>
+                </div>
 
-<div style="background:var(--bg);padding:16px;border-radius:14px;border:1px solid var(--line);position:relative">
-<span class="chip r" style="font-size:11px;padding:4px 10px;margin-bottom:8px;display:inline-block">STEP 2 · CAC = 0원 유입</span>
-<h4 style="font-size:15px;margin-bottom:6px;color:var(--fg)">중고차 인수 차주</h4>
-<p style="font-size:13px;margin:0">카싱크 앱 자발적 설치 ➔ <b>‘10만km 7대 부품 무상 정밀점검권’</b> 수령 후 제휴 카센터 예약 입고</p>
-</div>
+                <div class="card rv"
+                    style="border-top:4px solid #10b981;display:flex;flex-direction:column;gap:14px;background:var(--card)">
+                    <div>
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span class="chip"
+                                style="background:#ecfdf5;color:#059669;border-color:#a7f3d0;font-weight:700">STEP 3 ·
+                                차주 모바일</span>
+                            <span style="font-size:12px;color:var(--mut)">투명한 결정</span>
+                        </div>
+                        <h3 style="font-size:18px;color:var(--fg);margin-bottom:6px">옵션 A / 옵션 B 원클릭 승인</h3>
+                        <p style="font-size:13px;color:var(--mut);margin:0">차주가 직접 사진/음성을 확인하고 강요 없이 자발적 선택</p>
+                    </div>
+                    <div
+                        style="background:var(--bg);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.6">
+                        🚗 <b>옵션 A (0원):</b> 추가 없이 기본 작업 후 안전 하차<br>
+                        🔧 <b>옵션 B (+18만):</b> 정품 부품 발주 및 정밀 수리 승인
+                    </div>
+                </div>
 
-<div style="background:var(--bg);padding:16px;border-radius:14px;border:1px solid var(--line);position:relative">
-<span class="chip" style="background:#ecfdf5;color:#059669;border-color:#a7f3d0;font-weight:700;font-size:11px;padding:4px 10px;margin-bottom:8px;display:inline-block">STEP 3 · 유상 정비 전환</span>
-<h4 style="font-size:15px;margin-bottom:6px;color:var(--fg)">카싱크 제휴 정비소</h4>
-<p style="font-size:13px;margin:0">리프트 띄워 7대 점검 진행 ➔ 노후 부품(미션오일, 겉벨트 등) 확인 시 <b>즉각 30~50만 원 유상 전환</b></p>
-</div>
+            </div>
 
-<div style="background:var(--soft);padding:16px;border-radius:14px;border:1px solid var(--line);position:relative">
-<span class="chip" style="background:var(--ac);color:#fff;font-size:11px;padding:4px 10px;margin-bottom:8px;display:inline-block">STEP 4 · 영구 락인</span>
-<h4 style="font-size:15px;margin-bottom:6px;color:var(--fg)">생애주기 독점 관리</h4>
-<p style="font-size:13px;margin:0">첫 정밀 점검 데이터 영구 아카이빙 ➔ 15만·20만km 소모품 주기 알림으로 <b>이탈 불가능한 락인</b></p>
-</div>
+            <!-- Interactive Simulator Live View -->
+            <div id="simulator" class="card rv"
+                style="margin-top:24px;padding:0;overflow:hidden;border:1px solid var(--line);background:var(--card);border-radius:20px;box-shadow:0 12px 36px rgba(0,0,0,0.12)">
+                <div
+                    style="padding:16px 22px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;background:color-mix(in srgb,var(--bg) 95%,#000)">
+                    <div>
+                        <span
+                            style="font-size:11px;font-weight:800;color:var(--ac);letter-spacing:.08em;text-transform:uppercase">Interactive
+                            UI Experience</span>
+                        <h3 style="font-size:17px;margin:2px 0 0;display:flex;align-items:center;gap:8px">
+                            <span>🎮 원터치 사진·음성 &amp; 모바일 승인 실시간 시뮬레이터</span>
+                        </h3>
+                    </div>
+                    <div style="display:flex;gap:10px;align-items:center">
+                        <a href="2.html" target="_blank" rel="noopener noreferrer" class="btn"
+                            style="font-size:13px;padding:8px 18px;box-shadow:0 2px 10px rgba(229,50,45,0.25)">
+                            새 창으로 전체화면 열기 ↗
+                        </a>
+                    </div>
+                </div>
+                <div style="position:relative;width:100%;height:960px;background:#0f172a">
+                    <iframe src="2.html" title="원터치 사진·음성 & 모바일 승인 시뮬레이터"
+                        style="width:100%;height:100%;border:none;display:block" loading="lazy"></iframe>
+                </div>
+            </div>
 
-</div>
-</div>
+        </div>
+    </section>
 
-<!-- 3. 참여자별 3자 윈-윈 구조 -->
-<div>
-<h3 style="font-size:19px;margin-bottom:16px">참여자별 3자 윈-윈(Win-Win) 아키텍처</h3>
-<div class="grid">
+    <section id="offline">
+        <div class="w">
+            <div class="tag">System Architecture 4 · Payment Resilience</div>
+            <h2>오프라인 실물 카드 결제 누락을 막는<br>3중 인센티브 결제 아키텍처</h2>
+            <div class="card hl rv" style="margin-bottom:16px">
+                <h3>핵심 리스크 및 PM 대응 전략</h3>
+                <p>현장 실물 결제를 방치하면 차주-정비소 간 직거래로 플랫폼 수수료(BM)가 통째로 증발합니다. 행동 경제학적 인센티브와 백엔드 데이터 동기화로 누수를 차단했습니다.</p>
+            </div>
+            <div class="grid">
+                <div class="card rv">
+                    <h3>① 사장님 모바일 출고 청구서 발송</h3>
+                    <p>정비 완료 후 최종 작업 내역 확정 ➔ 차주 앱으로 '정비 완료 모바일 청구서' 즉시 전송 및 주행거리 0km 리셋 동기화</p>
+                </div>
+                <div class="card rv">
+                    <h3>② 카카오페이 / 토스페이 원터치 결제 (수수료 BM 핵심)</h3>
+                    <p>차주는 현장 단말기 대신 카카오페이·토스페이로 3초 결제 ➔ 플랫폼 결제 수수료 확보 및 작업 데이터 영구 박제 (3% 즉시 할인/적립 혜택으로 현장 카드 결제 유인 원천 차단)</p>
+                </div>
+                <div class="card rv">
+                    <h3>③ 현장 실물 결제 누락 방지 (Fall-back Safety)</h3>
+                    <p>불가피하게 현장 단말기/현금 결제 시: 사장님 정산용 승인 번호 대조 또는 결제 내역 캡처 승인으로 데이터 유실 최종 방어</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="card rv" style="border-top:3px solid #3b82f6">
-<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-<span class="chip" style="background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe;font-weight:700;font-size:12px">B2B 파트너</span>
-<span style="font-size:12px;color:var(--mut)">매매 상사 / 플랫폼</span>
-</div>
-<h3 style="font-size:17px;margin-bottom:8px">중고차 매매 상사 · 플랫폼</h3>
-<ul style="font-size:14px;margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px">
-<li><b>프리미엄 브랜딩:</b> “카싱크 무상 점검까지 챙겨주는 안심 상사”라는 차별화 신뢰 구축</li>
-<li><b>사후 민원 리스크 헤지:</b> “차 사고 일주일 만에 퍼졌다”는 식의 사후 하자 민원 책임을 제휴 카센터 사전 점검을 통해 원천 분산</li>
-</ul>
-</div>
+    <section id="gtm">
+        <div class="w">
+            <div class="tag">Used Car Platform Strategy · B2B2C GTM</div>
+            <h2>중고차 기업 특화 사후 케어 프로덕트 전략:<br><span style="color:var(--ac)">사후 클레임 리스크 헤지 &amp; 고객 LTV(생애가치) 극대화 파이프라인</span></h2>
+            <p class="lead">출고 시점 '안심 7대 고위험 부품 무상 점검'을 내재화하여 리스크를 사전에 털어내고 플랫폼에 영구 락인하는 PM의 프로덕트 아키텍처</p>
 
-<div class="card rv" style="border-top:3px solid #10b981">
-<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-<span class="chip" style="background:#ecfdf5;color:#059669;border-color:#a7f3d0;font-weight:700;font-size:12px">Supply Side</span>
-<span style="font-size:12px;color:var(--mut)">골목 카센터 사장님</span>
-</div>
-<h3 style="font-size:17px;margin-bottom:8px">카싱크 제휴 정비소</h3>
-<ul style="font-size:14px;margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px">
-<li><b>100% 교체 수요 포착:</b> 입고 차가 8~12만km 중고차이므로 리프트만 띄우면 노후 부품(겉벨트 크랙, 미션오일 오염, 패드 마모 등) 교체 수요 필연적 발생</li>
-<li><b>고단가 매출 직결:</b> 공짜 점검 손님이 방문 당일 <b>30~50만 원 상당 유상 정비 핵심 고객</b>으로 즉각 전환</li>
-</ul>
-</div>
+            <!-- 1. 중고차 유통 기업의 핵심 과제 (Problem) -->
+            <div style="margin-bottom:28px">
+                <h3 style="font-size:20px;margin-bottom:14px;color:var(--fg)">⚠️ 중고차 유통 기업의 핵심 과제 (Core Problem)</h3>
+                <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px">
+                    <div class="card rv" style="border-left:4px solid var(--mut)">
+                        <div style="font-size:12px;font-weight:700;color:var(--mut);letter-spacing:.05em;margin-bottom:6px">과제 1 · 손해율 &amp; CS 폭증</div>
+                        <h4 style="font-size:17px;margin-bottom:10px;color:var(--fg)">1. 출고 직후 사후 하자 분쟁 및 보증(Warranty) 비용 폭증</h4>
+                        <ul style="font-size:14px;line-height:1.75;margin:0;padding-left:18px">
+                            <li>8~12만km 중고차 인도 후 “일주일 만에 미션 슬립/하체 소음 발생” 등 고객의 악성 민원 및 환불 요구 급증</li>
+                            <li>고객 불신으로 인한 기업 브랜드 신뢰도 하락 및 CS 처리 비용의 비효율적 낭비</li>
+                        </ul>
+                    </div>
+                    <div class="card rv" style="border-left:4px solid var(--mut)">
+                        <div style="font-size:12px;font-weight:700;color:var(--mut);letter-spacing:.05em;margin-bottom:6px">과제 2 · LTV 한계 &amp; 유저 이탈</div>
+                        <h4 style="font-size:17px;margin-bottom:10px;color:var(--fg)">2. 차량 거래 완료 후 고객 관계 단절 (단발성 거래의 한계)</h4>
+                        <ul style="font-size:14px;line-height:1.75;margin:0;padding-left:18px">
+                            <li>차량 판매 후 앱 재방문 유인이 없어 유저 급속 이탈</li>
+                            <li>후속 정비/소모품 교체 및 지속적 차량 관리 락인 기회 원천 상실</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-<div class="card rv" style="border-top:3px solid var(--ac)">
-<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
-<span class="chip r" style="font-size:12px">B2C User</span>
-<span style="font-size:12px;color:var(--mut)">중고차 구매 고객</span>
-</div>
-<h3 style="font-size:17px;margin-bottom:8px">중고차 인수 차주</h3>
-<ul style="font-size:14px;margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px">
-<li><b>비용 0원 압도적 안심:</b> 성능점검표 불신이나 침수/전손 불안 없이 비용 0원으로 리프트 띄워 전문가 확인을 받는 압도적 안심 체감</li>
-<li><b>자발적 영구 락인:</b> 첫 점검 이력이 카싱크에 영구 박제되어, 향후 15만·20만km 차량 매각 시까지 카싱크 알림에 맞춰 정비 생활화</li>
-</ul>
-</div>
+            <!-- 2. PM의 프로덕트 해결책 (Product Solution & Pipeline) -->
+            <div class="card rv" style="margin-bottom:28px;background:var(--card);border:1px solid var(--line)">
+                <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:16px">
+                    <h3 style="font-size:19px;margin:0;color:var(--fg)">💡 PM의 프로덕트 해결책: 4단계 선제 리스크 헤지 &amp; 락인 파이프라인</h3>
+                    <span class="chip r" style="font-size:11px;font-weight:700">CAC = 0원 &amp; 영구 아카이빙</span>
+                </div>
+                <div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
 
-</div>
-</div>
+                    <div style="background:var(--bg);padding:16px;border-radius:14px;border:1px solid var(--line);position:relative">
+                        <span class="chip" style="font-size:11px;padding:4px 10px;margin-bottom:8px;display:inline-block">STEP 1 · 인앱 프로덕트화</span>
+                        <h4 style="font-size:15px;margin-bottom:6px;color:var(--fg)">출고 연계 인앱 프로덕트화</h4>
+                        <p style="font-size:13px;line-height:1.65;margin:0">차량 인도 즉시 앱 내 <b>‘안심 출고 7대 부품 정밀점검권’</b> 자동 지급 ➔ 고객의 불안을 안심으로 전환하고 <b>자사 앱 설치 및 온보딩 100% 유도 (CAC = 0원)</b></p>
+                    </div>
 
-</div></section>
+                    <div style="background:var(--bg);padding:16px;border-radius:14px;border:1px solid var(--line);position:relative">
+                        <span class="chip r" style="font-size:11px;padding:4px 10px;margin-bottom:8px;display:inline-block">STEP 2 · 선제 검진</span>
+                        <h4 style="font-size:15px;margin-bottom:6px;color:var(--fg)">협력 정비 네트워크 선제 검진</h4>
+                        <p style="font-size:13px;line-height:1.65;margin:0">제휴/직영 정비 네트워크 입고 ➔ 8~12만km 고위험 부품 사전 정밀 점검 ➔ <b>출고 후 터질 수 있는 중대 결함을 사전에 스크리닝하여 보증 손해율 및 민원 책임 분산</b></p>
+                    </div>
 
-<section id="model"><div class="w">
-<div class="tag">Business Model</div>
-<h2>재고 리스크 없는 고단가<br>소프트웨어 중개 &amp; 발주 파이프라인</h2>
-<div class="grid">
-<div class="card rv"><div class="big">3~5%</div><h3>7대 핵심 정비 중개 수수료</h3><p>객단가 150,000~350,000원 고마진 작업 매칭, 건당 6,000~15,000원 수익. 사장님 기본 마진을 보장해 반발 최소화</p></div>
-<div class="card rv"><div class="big">발주</div><h3>D-2 발주 연결 수수료</h3><p>부품 사입·물류 창고 배제. 정비소와 지역 부품 대리점 간 품번 자동 발주 알림 연동</p></div>
-<div class="card rv"><div class="big">1.5~2.0%</div><h3>추가 공임 결제 대행</h3><p>고착 볼트 해제 등 현장 추가 승인 금액 정산 수수료</p></div>
-<div class="card rv"><div class="big">39,000원</div><h3>B2B 정비 관리 SaaS (월)</h3><p>고객 관리, D-2 발주 알림, 정비 리포트 아카이빙</p></div>
-</div></div></section>
+                    <div style="background:var(--bg);padding:16px;border-radius:14px;border:1px solid var(--line);position:relative">
+                        <span class="chip" style="background:#ecfdf5;color:#059669;border-color:#a7f3d0;font-weight:700;font-size:11px;padding:4px 10px;margin-bottom:8px;display:inline-block">STEP 3 · 유상 전환</span>
+                        <h4 style="font-size:15px;margin-bottom:6px;color:var(--fg)">투명한 유상 케어 전환</h4>
+                        <p style="font-size:13px;line-height:1.65;margin:0">미션오일 산화, 겉벨트 크랙 등 노후 부품 발견 시 <b>STOP &amp; HOLD 투명 감사 리포트</b> 제공 ➔ <b>고객 자발적 납득 유상 정비(30~50만 원)로 전환</b></p>
+                    </div>
 
-<section id="vision"><div class="w">
-<div class="tag">Flywheel &amp; Vision</div>
-<h2>[세차의 정석] 통합 마일리지 락인 &amp;<br>커넥티드카 확장</h2>
-<div class="grid">
-<div class="card rv"><h3>카싱크 × 세차의 정석 플라이휠</h3>
-<div class="flow"><span class="chip">정비 (연 1회·고마진)</span><i>➔</i><span class="chip">대형 포인트 적립</span><i>➔</i><span class="chip">로드샵 (월 1~2회) 소진</span></div>
-<p>앱 삭제율 방어 및 오프라인 서비스 체류 시간 극대화</p></div>
-<div class="card rv"><h3>Phase 3 확장 로드맵</h3>
-<ul><li>현대자동차 ccNC(IVI) 탑재차량 주행거리 데이터 + 운전자 음성 증상 문진 결합</li>
-<li>현대 카페이(CarPay) 연동 인카 원스톱 정비 예약 체계 구축</li></ul></div>
-</div></div></section>
+                    <div style="background:var(--soft);padding:16px;border-radius:14px;border:1px solid var(--line);position:relative">
+                        <span class="chip" style="background:var(--ac);color:#fff;font-size:11px;padding:4px 10px;margin-bottom:8px;display:inline-block">STEP 4 · 영구 락인</span>
+                        <h4 style="font-size:15px;margin-bottom:6px;color:var(--fg)">차량 생애주기 영구 락인</h4>
+                        <p style="font-size:13px;line-height:1.65;margin:0">첫 정밀 점검 데이터가 앱 차계부에 영구 아카이빙 ➔ <b>15만·20만km 소모품 주기 알림 및 향후 '내차팔기(재매각)'까지 이어지는 고객 LTV 극대화</b></p>
+                    </div>
 
-<section id="next"><div class="w">
-<div class="tag">Next Step</div>
-<h2>군더더기를 걷어낸<br>2달 집중 실행 범위</h2>
-<div class="grid">
-<div class="card hl rv"><h3>초기 2달 MVP 집중</h3>
-<ul><li>7대 부품 판별 Python 룰 엔진</li><li>비용 0원 5대 감각 퀵 인터랙션 UI</li><li>사진 2장 + 음성 10초 템플릿 변환</li><li>예약금 10,000원 가상 정산 로직</li><li>종이 영수증 OCR 주행거리 리셋 검증</li></ul></div>
-<div class="card rv"><h3>Phase 2 이후 확장</h3>
-<ul><li>실시간 자연어 LLM 정밀 문진 API</li><li>전국 단위 D-2 자동 발주 SCM 연동</li><li>전문 PG사 본계약 및 복합 정산</li><li>[세차의 정석] 통합 마일리지 API</li><li>현대차 ccNC 및 인카페이 연동</li></ul></div>
-</div>
-<p style="margin-top:20px"><b>실행 계획:</b> 수도권 거점 정비소 2곳 파일럿 현장 테스트</p>
-<div class="quote">“진단, 문진, 승인의 3단계 최소 루프로 현장 문제를 증명하겠습니다. 피드백 부탁드립니다.”</div>
-<div style="margin-top:32px;text-align:center">
-<a class="btn" href="https://1008-jinhun-o9lgykd3u-wlsgns9607-7857s-projects.vercel.app/" target="_blank" rel="noopener noreferrer" style="font-size:16px;padding:15px 36px;box-shadow:0 6px 20px rgba(229,50,45,0.35)">🚀 MVP 테스트버전 바로가기 ↗</a>
-</div>
-</div></section>
+                </div>
+            </div>
 
-<footer>© CarSync × 세차의 정석 · 기획 총괄 조진훈 PM</footer>
-<script>
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-document.querySelectorAll('.rv').forEach(function(e){io.observe(e)});
-</script>
+            <!-- 3. 중고차 기업 관점의 비즈니스 기대 효과 (Business Impact) -->
+            <div style="margin-bottom:28px">
+                <h3 style="font-size:20px;margin-bottom:14px;color:var(--fg)">📈 중고차 기업 관점의 비즈니스 기대 효과 (Business Impact)</h3>
+                <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+
+                    <div class="card rv" style="border-top:4px solid #3b82f6">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span class="chip" style="background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe;font-size:11px;font-weight:700">브랜딩 가치</span>
+                            <span style="font-size:12px;color:var(--mut)">신뢰 포지셔닝</span>
+                        </div>
+                        <h4 style="font-size:16px;margin-bottom:8px;color:var(--fg)">브랜드 신뢰도 극대화</h4>
+                        <p style="font-size:13px;line-height:1.65;margin:0;color:var(--fg)">
+                            “출고 후 리프트 띄워 하부까지 투명하게 확인해 주는 유일한 중고차 플랫폼”으로 독보적 신뢰 브랜딩 확보
+                        </p>
+                    </div>
+
+                    <div class="card rv" style="border-top:4px solid var(--ac)">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span class="chip r" style="font-size:11px;font-weight:700">비용 절감</span>
+                            <span style="font-size:12px;color:var(--mut)">손해율 방어</span>
+                        </div>
+                        <h4 style="font-size:16px;margin-bottom:8px;color:var(--fg)">사후 보증 손해율 방어</h4>
+                        <p style="font-size:13px;line-height:1.65;margin:0;color:var(--fg)">
+                            출고 직후 파워트레인 결함 발생으로 인한 수백만 원대 무상 수리/환불 비용 및 악성 분쟁 CS를 선제 차단
+                        </p>
+                    </div>
+
+                    <div class="card rv" style="border-top:4px solid #10b981">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+                            <span class="chip" style="background:#ecfdf5;color:#059669;border-color:#a7f3d0;font-size:11px;font-weight:700">데이터 자산</span>
+                            <span style="font-size:12px;color:var(--mut)">재매입 시세 방어</span>
+                        </div>
+                        <h4 style="font-size:16px;margin-bottom:8px;color:var(--fg)">지속 가능한 데이터 자산화</h4>
+                        <p style="font-size:13px;line-height:1.65;margin:0;color:var(--fg)">
+                            점검·정비 이력 데이터의 누적으로 향후 중고차 재매입 시 정확한 감가 및 시세 방어 데이터베이스 확보
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="model">
+        <div class="w">
+            <div class="tag">Business Impact &amp; Unit Economics</div>
+            <h2>플랫폼 영업이익과 현장 공임을 극대화하는<br><span style="color:var(--ac)">PM의 비즈니스 임팩트 설계</span></h2>
+            <p class="lead">단순 쿠폰 출혈 경쟁에서 벗어나, 10만km 묶음 정비와 백엔드 프로세스 자동화로 달성한 유닛 이코노믹스 혁신</p>
+
+            <!-- 1. Unit Economics Before vs After 매트릭스 -->
+            <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;margin-bottom:28px">
+                <div class="card rv" style="border-left:4px solid var(--mut)">
+                    <div style="font-size:12px;font-weight:700;color:var(--mut);letter-spacing:.05em;margin-bottom:8px">BEFORE · 기존 단순 경정비 플랫폼 (마이클 등)</div>
+                    <h3 style="font-size:18px;margin-bottom:12px;color:var(--fg)">박리다매 쿠폰 경쟁의 구조적 한계</h3>
+                    <ul style="font-size:14px;line-height:1.75;margin:0;padding-left:18px">
+                        <li><b>객단가:</b> 2~3만 원 (엔진오일 단순 할인 쿠폰 의존)</li>
+                        <li><b>정비소 마진:</b> 건당 1만 원 미만 (리프트 점유 대비 마진 저조, 낮은 파트너 만족도 및 현장 반발)</li>
+                        <li><b>플랫폼 수익성:</b> 객단가 한계로 인한 지속적 적자 구조 및 현장 공임 분쟁으로 인한 CS 비용 폭증</li>
+                    </ul>
+                </div>
+                <div class="card hl rv" style="border-left:4px solid var(--ac)">
+                    <div style="font-size:12px;font-weight:800;color:var(--ac);letter-spacing:.05em;margin-bottom:8px">AFTER · PM이 재설계한 유닛 이코노믹스 임팩트</div>
+                    <h3 style="font-size:18px;margin-bottom:12px;color:var(--fg)">10만km 고단가 &amp; 오프라인 무마찰 모델</h3>
+                    <ul style="font-size:14px;line-height:1.75;margin:0;padding-left:18px">
+                        <li><b>객단가:</b> <b>150,000 ~ 350,000원 (5배~10배 스케일업)</b></li>
+                        <li><b>정비소 순공임:</b> <b>건당 6~15만 원 보장</b> (하루 2대 정비로 정비소 일 목표 달성, 강력한 네트워크 락인)</li>
+                        <li><b>플랫폼 수익성:</b> <b>부품 재고 비용 0원 + 분쟁 CS 손실 비용 80% 이상 절감</b>으로 흑자 전환 구조 확립</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. PM 핵심 임팩트 3대 축 -->
+            <div style="margin-bottom:32px">
+                <h3 style="font-size:20px;margin-bottom:16px">🎯 PM이 재설계한 3대 비즈니스 임팩트 핵심 축</h3>
+                <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px">
+
+                    <!-- 축 1 -->
+                    <div class="card rv" style="border-top:4px solid var(--ac)">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+                            <span class="chip r" style="font-size:12px;font-weight:700">임팩트 1</span>
+                            <span style="font-size:12px;color:var(--mut)">GMV &amp; 객단가</span>
+                        </div>
+                        <h4 style="font-size:17px;margin-bottom:8px;color:var(--fg)">1. 객단가 5배~10배 스케일업 (150,000 ~ 350,000원)</h4>
+                        <ul style="font-size:13px;line-height:1.65;margin:0;padding-left:18px;color:var(--fg)">
+                            <li>10만km 7대 고위험 부품 묶음 정비로 거래액(GMV) 체질을 근본적으로 개선</li>
+                            <li>파트너 정비소 건당 순공임 마진 6~15만 원을 보장하여 출혈 마케팅 없이도 공급자 네트워크 락인 달성</li>
+                        </ul>
+                    </div>
+
+                    <!-- 축 2 -->
+                    <div class="card rv" style="border-top:4px solid #3b82f6">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+                            <span class="chip" style="background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe;font-size:12px;font-weight:700">임팩트 2</span>
+                            <span style="font-size:12px;color:var(--mut)">SCM &amp; 재고 비용</span>
+                        </div>
+                        <h4 style="font-size:17px;margin-bottom:8px;color:var(--fg)">2. D-2 직배송 연동을 통한 부품 재고 비용 0원화</h4>
+                        <ul style="font-size:13px;line-height:1.65;margin:0;padding-left:18px;color:var(--fg)">
+                            <li>자체 물류창고/사입 리스크 없이 지역 대리점(모비스 순정품 등) 직발주 파이프라인 매핑</li>
+                            <li>플랫폼의 재고 자산 감가상각 및 창고 고정비 리스크 원천 배제</li>
+                        </ul>
+                    </div>
+
+                    <!-- 축 3 -->
+                    <div class="card rv" style="border-top:4px solid #10b981">
+                        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+                            <span class="chip" style="background:#ecfdf5;color:#059669;border-color:#a7f3d0;font-size:12px;font-weight:700">임팩트 3</span>
+                            <span style="font-size:12px;color:var(--mut)">CS Cost &amp; 데이터 자산화</span>
+                        </div>
+                        <h4 style="font-size:17px;margin-bottom:8px;color:var(--fg)">3. 현장 변수 투명화로 분쟁 손실 비용(CS Cost) 80% 이상 절감</h4>
+                        <ul style="font-size:13px;line-height:1.65;margin:0;padding-left:18px;color:var(--fg)">
+                            <li>STOP &amp; HOLD 및 감사 로그로 과잉 정비 환불 민원 및 보상 비용 원천 차단</li>
+                            <li>불필요한 결제 누수 방지(인앱 청구서 결제)로 플랫폼 결제 데이터 100% 자산화 및 수수료 BM 보존</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="vision">
+        <div class="w">
+            <div class="tag">Flywheel &amp; Scalability</div>
+            <h2>[세차의 정석] 통합 마일리지 락인 &amp;<br>커넥티드카 확장</h2>
+            <div class="grid">
+                <div class="card rv">
+                    <h3>카싱크 × 세차의 정석 플라이휠</h3>
+                    <div class="flow"><span class="chip">정비 (연 1회·고마진)</span><i>➔</i><span class="chip">대형 포인트 적립</span><i>➔</i><span class="chip">로드샵 (월 1~2회) 소진</span></div>
+                    <p>앱 삭제율 방어 및 오프라인 서비스 체류 시간 극대화</p>
+                </div>
+                <div class="card rv">
+                    <h3>Phase 3 확장 로드맵</h3>
+                    <ul>
+                        <li>현대자동차 ccNC(IVI) 탑재차량 주행거리 데이터 + 운전자 음성 증상 문진 결합</li>
+                        <li>현대 카페이(CarPay) 연동 인카 원스톱 정비 예약 체계 구축</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="next">
+        <div class="w">
+            <div class="tag">Roadmap &amp; PM Contribution</div>
+            <h2>현장 도메인과 데이터 파이프라인을 엮는<br><span style="color:var(--ac)">PM 기여 방안 및 프로덕트 로드맵</span></h2>
+            
+            <!-- PM 핵심 기여 방안 (Why Me?) 카드 -->
+            <div class="card hl rv" style="margin-bottom:24px;border-left:4px solid var(--ac)">
+                <h3 style="font-size:19px;margin-bottom:12px;color:var(--fg)">💡 PM으로서의 핵심 기여 가치: 현장 분쟁 비용 절감 &amp; 객단가 극대화</h3>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px">
+                    <div style="background:var(--card);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.65">
+                        <b style="color:var(--ac);display:block;margin-bottom:4px">🛡️ 현장 분쟁 CS 비용 제로화</b>
+                        3중 감사 로그 &amp; STOP &amp; HOLD 승인 체계로 정비 분쟁 공방을 원천 차단하여 플랫폼의 CS 인입 및 보상 비용을 획기적으로 절감합니다.
+                    </div>
+                    <div style="background:var(--card);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.65">
+                        <b style="color:var(--ac);display:block;margin-bottom:4px">📈 객단가 &amp; 리프트 회전율 상승</b>
+                        단순 2만 원 쿠폰이 아닌 10만km 7대 부품 패키지와 D-2 모비스 직배송으로 정비소 건당 공임 마진(6~15만 원)을 보장하고 제휴 락인을 완성합니다.
+                    </div>
+                    <div style="background:var(--card);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.65">
+                        <b style="color:var(--ac);display:block;margin-bottom:4px">🔒 플랫폼 결제 누수 100% 방어</b>
+                        모바일 청구서 + 간편결제 3% 혜택 결합으로 현장 실물 카드 직거래 유인을 제거하여 플랫폼 중개 수수료 BM을 완벽히 보존합니다.
+                    </div>
+                    <div style="background:var(--card);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.65">
+                        <b style="color:var(--ac);display:block;margin-bottom:4px">🎯 CAC = 0원 그로스 파이프라인</b>
+                        중고차 매매 상사 B2B2C 무상점검권 제휴를 통해 고비용 퍼포먼스 마케팅 없이도 8~12만km 고관여 타깃 유저를 지속 획득합니다.
+                    </div>
+                </div>
+            </div>
+
+            <!-- 단계별 실행 로드맵 -->
+            <div class="grid">
+                <div class="card rv">
+                    <div class="chip r" style="font-size:11px;font-weight:700;margin-bottom:10px">Phase 1 · 집중 실행 범위</div>
+                    <h3 style="font-size:17px;margin-bottom:8px">핵심 프로토콜 &amp; MVP 검증</h3>
+                    <ul style="font-size:14px;line-height:1.7;margin:0;padding-left:18px">
+                        <li><b>파워트레인별 가변 룰 엔진:</b> 내연기관/HEV/EV 7대 부품 판별 Python 엔진</li>
+                        <li><b>비용 0원 퀵 인터랙션:</b> 지연시간 0.01초 5대 감각 매핑 UI</li>
+                        <li><b>STOP &amp; HOLD 감사 로그:</b> 사진 2장 + 음성 10초 템플릿 변환 및 승인 전 정지</li>
+                        <li><b>정산 안전장치:</b> 예약금 10,000원 에스크로 가상 정산 로직</li>
+                        <li><b>데이터 동기화:</b> 종이 영수증 OCR 주행거리 리셋 및 모바일 출고 청구서 검증</li>
+                    </ul>
+                </div>
+                <div class="card rv">
+                    <div class="chip" style="background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe;font-size:11px;font-weight:700;margin-bottom:10px">Phase 2 &amp; 3 · 확장 로드맵</div>
+                    <h3 style="font-size:17px;margin-bottom:8px">데이터 파이프라인 &amp; 플랫폼 확장</h3>
+                    <ul style="font-size:14px;line-height:1.7;margin:0;padding-left:18px">
+                        <li><b>실시간 LLM 정밀 문진:</b> 복합 이상 징후 자연어 정밀 분석 API</li>
+                        <li><b>D-2 SCM 자동화:</b> 전국 지역 부품 대리점 품번 연동 자동 발주 시스템</li>
+                        <li><b>복합 정산 SaaS:</b> 전문 PG사 본계약 및 에스크로-공임 분리 정산 체계</li>
+                        <li><b>[세차의 정석] 플라이휠:</b> 통합 마일리지 API 연동으로 리텐션 극대화</li>
+                        <li><b>커넥티드카 확장:</b> 현대차 ccNC(IVI) 주행 데이터 및 인카페이(CarPay) 연동</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p style="margin-top:24px;font-size:14px;color:var(--fg)"><b>현장 실행 검증:</b> 수도권 거점 정비소 2곳 파일럿 인터뷰 및 STOP &amp; HOLD 감사 로그 프로토콜 현장 실증</p>
+            <div class="quote">“화려한 화면 기획에 머물지 않고, 현장의 기름 묻은 장갑과 대화하며 분쟁을 구조적으로 해결하는 프로덕트를 만듭니다.<br>현장 도메인과 데이터 파이프라인을 엮어 기업의 비즈니스 가치를 숫자로 증명해 내는 모빌리티 AX 프로덕트 매니저가 되겠습니다.”</div>
+            <div style="margin-top:32px;text-align:center">
+                <a class="btn" href="https://1008-jinhun-o9lgykd3u-wlsgns9607-7857s-projects.vercel.app/"
+                    target="_blank" rel="noopener noreferrer"
+                    style="font-size:16px;padding:15px 36px;box-shadow:0 6px 20px rgba(229,50,45,0.35)">🚀 MVP 프로덕트 바로가기 ↗</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>© CarSync × 세차의 정석 · 모빌리티 AX 프로덕트 매니저 지원자 조진훈</footer>
+    <script>
+        var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target) } }) }, { threshold: .12 });
+        document.querySelectorAll('.rv').forEach(function (e) { io.observe(e) });
+    </script>
 </body>
+
 </html>
