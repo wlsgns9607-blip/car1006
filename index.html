@@ -949,7 +949,7 @@
             </div>
 
             <!-- PM's Retrospective (기획자 회고 박스) -->
-            <div class="card rv" style="background:var(--card);border:2px solid var(--ac);border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(229,50,45,0.06)">
+            <div class="card rv" style="background:var(--card);border:2px solid var(--ac);border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(229,50,45,0.06);margin-bottom:28px">
                 <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
                     <span class="chip r" style="font-size:12px;font-weight:900;padding:4px 12px">💡 PM's Retrospective</span>
                     <h3 style="font-size:18px;margin:0;color:var(--fg)">기획자 회고 및 스코핑 총평</h3>
@@ -962,6 +962,56 @@
                     <div style="background:var(--bg);padding:16px;border-radius:12px;border:1px solid var(--line);line-height:1.7">
                         <b style="color:var(--ac);display:block;font-size:15px;margin-bottom:6px">🎯 철저한 MVP 스코프 통제 (De-scoping)</b>
                         긴급출동 전화번호, 팝업 일러스트, 유종별 세부 부품 등 <b>지엽적 기능 욕심을 철저히 쳐내어(De-scoping)</b>, 10월 런칭 일정 준수와 핵심 7대 부품 룰 엔진 고도화에 100% 집중했습니다.
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📸 [프로덕트 실증] 코나 DCT 미션오일 6만KM 설정 완료 및 구현 이유 -->
+            <div class="card rv" style="background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 12px 36px rgba(0,0,0,0.05)">
+                <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:18px;border-bottom:1px solid var(--line);padding-bottom:14px">
+                    <div style="display:flex;align-items:center;gap:10px">
+                        <span class="chip" style="background:#ecfdf5;color:#059669;border:1px solid #10b981;font-size:12px;font-weight:900;padding:4px 12px">실제 프로덕트 반영 증명</span>
+                        <h3 style="font-size:19px;margin:0;color:var(--fg)">코나 1.6T 건식 DCT 미션오일 6만KM 자동 매핑 설정 완료</h3>
+                    </div>
+                    <span class="badge-status badge-core">✅ 시스템 가변 룰 엔진 연동 완료</span>
+                </div>
+
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;align-items:center">
+                    <!-- 실제 구현 화면 스크린샷 (IMG/IMG_001.png) -->
+                    <div style="background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:12px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,0.04)">
+                        <div style="position:relative;overflow:hidden;border-radius:12px;border:1px solid var(--line)">
+                            <img src="IMG/IMG_001.png" alt="코나 1.6T DCT 미션오일 6만km 설정 완료 화면" style="width:100%;height:auto;display:block;object-fit:cover;border-radius:12px;transition:transform .3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                        </div>
+                        <p style="font-size:12px;color:var(--mut);margin-top:10px;margin-bottom:0">
+                            ▲ <b>카싱크 실제 진단 화면:</b> 코나 1.6 가솔린 터보 선택 시 <b>3. 미션오일 (6만km)</b> 자동 분기 및 주기 초과 위험 진단
+                        </p>
+                    </div>
+
+                    <!-- 6만KM 설정 이유 및 PM 의사결정 배경 -->
+                    <div style="display:flex;flex-direction:column;gap:14px">
+                        <div style="background:var(--soft);border-left:4px solid var(--ac);padding:14px 18px;border-radius:0 12px 12px 0">
+                            <h4 style="font-size:15px;color:var(--fg);margin-bottom:6px">💡 왜 '코나 DCT 미션오일'을 6만km로 설정했는가?</h4>
+                            <p style="font-size:13px;line-height:1.7;color:var(--fg);margin:0">
+                                송영주 님 인터뷰 피드백(<b>"DCT 파악이 어려우니 1.6 터보 선택 시 자동 매핑", "DCT vs 일반 AT 교환 주기 차이"</b>)을 수렴하여 파워트레인 종속 규칙 엔진을 설계했습니다.
+                            </p>
+                        </div>
+
+                        <div style="display:flex;flex-direction:column;gap:10px">
+                            <div style="background:var(--bg);padding:13px 16px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.65">
+                                <b style="color:var(--ac);display:block;margin-bottom:4px">1. 7단 건식 DCT의 구조적 열화 특성 반영</b>
+                                코나 1.6 가솔린 터보에 적용된 7단 건식 DCT는 일반 유압식 자동변속기(AT, 권장 10만km)와 달리 클러치가 오일에 잠겨있지 않아 도심 정체 및 가감속 시 <b>열과 슬립에 취약</b>합니다.
+                            </div>
+
+                            <div style="background:var(--bg);padding:13px 16px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.65">
+                                <b style="color:#059669;display:block;margin-bottom:4px">2. 고액 수리비(미션 앗세이 200~400만 원) 선제 예방</b>
+                                미션오일 열화 방치 시 <b>더블클러치 마모 슬립, 저속 변속 충격, 출력 상실</b>이 발생합니다. 치명적 고장 이전에 차주가 인지할 수 있도록 <b>6만km 교체 권장 주기</b>로 선제 락인했습니다.
+                            </div>
+
+                            <div style="background:var(--bg);padding:13px 16px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.65">
+                                <b style="color:#3b82f6;display:block;margin-bottom:4px">3. 차알못 사용자 인지 부담 제로화 (자동 매핑)</b>
+                                차주가 변속기 스펙(DCT 여부)을 몰라도 <b>[차종: 코나] + [엔진: 1.6 가솔린 터보]</b>만 등록하면 시스템이 자동으로 7단 건식 DCT 전용 주기(6만km)와 위험 알림을 산출합니다.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
