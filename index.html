@@ -309,13 +309,60 @@
             opacity: 1;
             transform: none
         }
+
+        .feedback-table th, .feedback-table td {
+            vertical-align: middle;
+        }
+        .chip-cat {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+        .badge-status {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 800;
+            padding: 6px 12px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+        .badge-core {
+            background: #ecfdf5;
+            color: #065f46;
+            border: 1px solid #6ee7b7;
+        }
+        .badge-ux {
+            background: #eff6ff;
+            color: #1e40af;
+            border: 1px solid #93c5fd;
+        }
+        .badge-fix {
+            background: #f5f3ff;
+            color: #5b21b6;
+            border: 1px solid #c4b5fd;
+        }
+        .badge-backlog {
+            background: #fffbeb;
+            color: #92400e;
+            border: 1px solid #fcd34d;
+        }
+        .badge-out {
+            background: #fef2f2;
+            color: #991b1b;
+            border: 1px solid #fca5a5;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <div><span class="logo">Car<span>Sync</span> <small style="font-size:11px;color:var(--mut);font-weight:600;padding:2px 6px;border-radius:6px;background:var(--card);border:1px solid var(--line);margin-left:4px">PM Portfolio</small></span>
-            <nav><a href="#pitch" style="color:var(--ac);font-weight:800">⚡ 5분 피치</a><a href="#problem">문제 정의</a><a href="#comparison">선발주자 비교</a><a href="#solution">부품 체계</a><a
+            <nav><a href="#pitch" style="color:var(--ac);font-weight:800">⚡ 5분 피치</a><a href="#problem">문제 정의</a><a href="#comparison">선발주자 비교</a><a href="#solution">부품 체계</a><a href="#feedback" style="color:#2563eb;font-weight:700">🎯 피드백 &amp; 디스코핑</a><a
                     href="#field">STOP &amp; HOLD</a><a href="#offline">결제 안전망</a><a href="#gtm">중고차 사후케어</a><a
                     href="#model">비즈니스 임팩트</a><a href="#vision">플라이휠</a><a href="#next">PM 로드맵</a><a href="2.html" target="_blank"
                     rel="noopener noreferrer"
@@ -702,6 +749,185 @@
                     <p>화면 하단 면책 명시: “정비 금액은 정비소 현장 실차 점검 후 최종 확정됩니다”</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- 🎯 [포트폴리오 삽입용] 사용자 피드백 & MVP 스코핑 의사결정 (De-scoping) -->
+    <section id="feedback" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+        <div class="w">
+            <div class="tag">User Feedback &amp; PM Decision-Making (De-scoping)</div>
+            <h2>사용자 피드백 수렴 &amp; MVP 스코핑 의사결정<br><span style="color:var(--ac)">“과감한 디스코핑(De-scoping)으로 10월 런칭 일정 사수”</span></h2>
+            
+            <div class="quote">
+                “모든 피드백을 수용하는 것은 기획이 아닙니다.<br>
+                <b>핵심 가치를 날카롭게 다듬고, 10월 MVP 배포 일정을 사수하기 위해 과감히 쳐내는 것이 PM의 진짜 역할입니다.</b>”
+            </div>
+
+            <!-- 핵심 지표 요약 카드 -->
+            <div class="stats" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:28px">
+                <div class="card rv" style="border-top:3px solid #6366f1">
+                    <div class="big" style="color:#6366f1">7건</div>
+                    <p><b>인입된 현장 인터뷰 피드백</b><br><small style="color:var(--mut)">(송영주 님 심층 인터뷰)</small></p>
+                </div>
+                <div class="card rv" style="border-top:3px solid #10b981">
+                    <div class="big" style="color:#10b981">4건</div>
+                    <p><b>즉시 조치 및 기능 반영</b><br><small style="color:var(--mut)">(Core 엔진 / 가변 주기 / 쉬운말 모드)</small></p>
+                </div>
+                <div class="card rv" style="border-top:3px solid var(--ac)">
+                    <div class="big" style="color:var(--ac)">3건</div>
+                    <p><b>과감한 디스코핑 (Scope-Out)</b><br><small style="color:var(--mut)">(긴급출동 / 팝업 그래픽 / 세부 부품)</small></p>
+                </div>
+                <div class="card rv" style="border-top:3px solid #f59e0b">
+                    <div class="big" style="color:#f59e0b">100%</div>
+                    <p><b>10월 MVP 배포 일정 준수</b><br><small style="color:var(--mut)">(핵심 7대 부품 룰 엔진 안정화 사수)</small></p>
+                </div>
+            </div>
+
+            <!-- 피드백 & 의사결정 매트릭스 테이블 -->
+            <div class="table-wrap rv" style="overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:8px;margin-bottom:28px;box-shadow:0 4px 20px rgba(0,0,0,0.03)">
+                <table class="feedback-table" style="width:100%;border-collapse:collapse;font-size:14px;line-height:1.6">
+                    <thead>
+                        <tr style="border-bottom:2px solid var(--line);background:var(--bg)">
+                            <th style="padding:16px 14px;text-align:left;font-weight:800;color:var(--fg);width:14%">구분</th>
+                            <th style="padding:16px 14px;text-align:left;font-weight:800;color:var(--fg);width:31%">인입된 피드백 (송영주 님 인터뷰)</th>
+                            <th style="padding:16px 14px;text-align:left;font-weight:800;color:var(--fg);width:37%">PM 의사결정 및 조치 (Action &amp; De-scoping)</th>
+                            <th style="padding:16px 14px;text-align:center;font-weight:800;color:var(--fg);width:18%">상태 / 반영 결과</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 1. 코어 룰 엔진 -->
+                        <tr style="border-bottom:1px solid var(--line)">
+                            <td style="padding:16px 14px;font-weight:800;color:var(--fg)">
+                                <span class="chip-cat" style="background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe">코어 룰 엔진</span>
+                            </td>
+                            <td style="padding:16px 14px;color:var(--fg)">
+                                “일반인은 DCT 파악이 어려우니 <b>1.6 터보 선택 시 자동으로 DCT 매핑</b>되면 좋을 듯”
+                            </td>
+                            <td style="padding:16px 14px;color:var(--fg)">
+                                <b style="color:#059669">[즉시 반영]</b> <b>파워트레인 종속 규칙 엔진 구축.</b> 코나 1.6T 선택 시 7단 건식 DCT (6만km)로 자동 연동 매핑.
+                            </td>
+                            <td style="padding:16px 14px;text-align:center">
+                                <span class="badge-status badge-core">✅ 반영 완료 (Core)</span>
+                            </td>
+                        </tr>
+
+                        <!-- 2. 도메인 정합성 -->
+                        <tr style="border-bottom:1px solid var(--line)">
+                            <td style="padding:16px 14px;font-weight:800;color:var(--fg)">
+                                <span class="chip-cat" style="background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe">도메인 정합성</span>
+                            </td>
+                            <td style="padding:16px 14px;color:var(--fg)">
+                                “DCT냐 일반 자동이냐에 따라 <b>미션오일 교환 주기(6만 vs 10만km)</b>가 다름”
+                            </td>
+                            <td style="padding:16px 14px;color:var(--fg)">
+                                <b style="color:#059669">[즉시 반영]</b> <b>트림별 가변 주기 알고리즘 적용</b> 및 미션 형식별 교체 점검 경고 배너 동적 분기 처리.
+                            </td>
+                            <td style="padding:16px 14px;text-align:center">
+                                <span class="badge-status badge-core">✅ 반영 완료 (Core)</span>
+                            </td>
+                        </tr>
+
+                        <!-- 3. UX 접근성 -->
+                        <tr style="border-bottom:1px solid var(--line)">
+                            <td style="padding:16px 14px;font-weight:800;color:var(--fg)">
+                                <span class="chip-cat" style="background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0">UX 접근성</span>
+                            </td>
+                            <td style="padding:16px 14px;color:var(--fg)">
+                                “어르신들이나 차알못은 자기가 무슨 엔진 쓰는지도 모를 듯”
+                            </td>
+                            <td style="padding:16px 14px;color:var(--fg)">
+                                <b style="color:#059669">[즉시 반영]</b> 타깃을 무리하게 확장하지 않고, 오입력 방지용 <b>[간편·쉬운말 모드]</b> 원터치 토글 옵션 배치.
+                            </td>
+                            <td style="padding:16px 14px;text-align:center">
+                                <span class="badge-status badge-ux">✅ 반영 완료 (UX)</span>
+                            </td>
+                        </tr>
+
+                        <!-- 4. 버그/동선 개선 -->
+                        <tr style="border-bottom:1px solid var(--line)">
+                            <td style="padding:16px 14px;font-weight:800;color:var(--fg)">
+                                <span class="chip-cat" style="background:#f5f3ff;color:#6d28d9;border:1px solid #ddd6fe">버그/동선 개선</span>
+                            </td>
+                            <td style="padding:16px 14px;color:var(--fg)">
+                                “카센터 알아보기 버튼 먹통, 특정 그래프 비정상”
+                            </td>
+                            <td style="padding:16px 14px;color:var(--fg)">
+                                <b style="color:#2563eb">[즉시 조치]</b> 위치 기반 공업사 리스트 연동 및 그래프 데이터 바인딩 오류 즉각 수정.
+                            </td>
+                            <td style="padding:16px 14px;text-align:center">
+                                <span class="badge-status badge-fix">✅ 버그 픽스 완료</span>
+                            </td>
+                        </tr>
+
+                        <!-- 5. 부가 기능 -->
+                        <tr style="border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 40%,transparent)">
+                            <td style="padding:16px 14px;font-weight:800;color:var(--fg)">
+                                <span class="chip-cat" style="background:#fffbeb;color:#b45309;border:1px solid #fde68a">부가 기능</span>
+                            </td>
+                            <td style="padding:16px 14px;color:var(--mut)">
+                                “4륜 전용 디퍼런셜 오일, 디젤 전용 연료필터도 추가 필요”
+                            </td>
+                            <td style="padding:16px 14px;color:var(--fg)">
+                                <b style="color:#d97706">[Scope-Out]</b> <b>핵심 7대 부품 룰 엔진 안정화에 집중</b>하기 위해 정식 릴리즈(v1.1) 백로그로 이관.
+                            </td>
+                            <td style="padding:16px 14px;text-align:center">
+                                <span class="badge-status badge-backlog">⏳ 차기 백로그 (v1.1)</span>
+                            </td>
+                        </tr>
+
+                        <!-- 6. 외부 연동 -->
+                        <tr style="border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--soft) 30%,transparent)">
+                            <td style="padding:16px 14px;font-weight:800;color:var(--fg)">
+                                <span class="chip-cat" style="background:#fef2f2;color:#b91c1c;border:1px solid #fecaca">외부 연동</span>
+                            </td>
+                            <td style="padding:16px 14px;color:var(--mut)">
+                                “보험사별/도로교통공사 긴급출동 전화번호 연동 필요”
+                            </td>
+                            <td style="padding:16px 14px;color:var(--fg)">
+                                <b style="color:var(--ac)">[Scope-Out]</b> <b>정비소 리프트 분쟁 방지가 코어 BM</b>이므로, 외부 보험사 연동 영역은 과감히 제외.
+                            </td>
+                            <td style="padding:16px 14px;text-align:center">
+                                <span class="badge-status badge-out">⛔ 과감히 제외 (Out)</span>
+                            </td>
+                        </tr>
+
+                        <!-- 7. UI 연출 -->
+                        <tr style="background:color-mix(in srgb,var(--soft) 30%,transparent)">
+                            <td style="padding:16px 14px;font-weight:800;color:var(--fg)">
+                                <span class="chip-cat" style="background:#fef2f2;color:#b91c1c;border:1px solid #fecaca">UI 연출</span>
+                            </td>
+                            <td style="padding:16px 14px;color:var(--mut)">
+                                “부품 미교환 시 위험성을 팝업 일러스트/그림으로 설명”
+                            </td>
+                            <td style="padding:16px 14px;color:var(--fg)">
+                                <b style="color:var(--ac)">[Scope-Out]</b> <b>그래픽 리소스 낭비를 지양</b>하고, 수리비 앵커링(“미션 앗세이 200~400만”) 텍스트 리포트로 대체.
+                            </td>
+                            <td style="padding:16px 14px;text-align:center">
+                                <span class="badge-status badge-out">⛔ 과감히 제외 (Out)</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- PM's Retrospective (기획자 회고 박스) -->
+            <div class="card rv" style="background:var(--card);border:2px solid var(--ac);border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(229,50,45,0.06)">
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+                    <span class="chip r" style="font-size:12px;font-weight:900;padding:4px 12px">💡 PM's Retrospective</span>
+                    <h3 style="font-size:18px;margin:0;color:var(--fg)">기획자 회고 및 스코핑 총평</h3>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+                    <div style="background:var(--bg);padding:16px;border-radius:12px;border:1px solid var(--line);line-height:1.7">
+                        <b style="color:#059669;display:block;font-size:15px;margin-bottom:6px">🔍 현장 엣지 케이스 발견 및 해결</b>
+                        비전문가 차주의 인지 한계를 파악하여, 사용자가 본인의 미션 형식을 몰라도 <b>파워트레인 자동 매핑 로직(코나 1.6T ➔ 7단 건식 DCT 6만km 종속)</b>을 완성해 데이터 무결성을 확보했습니다.
+                    </div>
+                    <div style="background:var(--bg);padding:16px;border-radius:12px;border:1px solid var(--line);line-height:1.7">
+                        <b style="color:var(--ac);display:block;font-size:15px;margin-bottom:6px">🎯 철저한 MVP 스코프 통제 (De-scoping)</b>
+                        긴급출동 전화번호, 팝업 일러스트, 유종별 세부 부품 등 <b>지엽적 기능 욕심을 철저히 쳐내어(De-scoping)</b>, 10월 런칭 일정 준수와 핵심 7대 부품 룰 엔진 고도화에 100% 집중했습니다.
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
