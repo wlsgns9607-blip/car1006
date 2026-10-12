@@ -710,35 +710,83 @@
     <section id="mvp">
         <div class="w">
             <div class="tag">System Architecture 2 · Lightweight Rule-Based Engine</div>
-            <h2>비용 0원 룰 베이스 문진 엔진 &amp;<br>파워트레인 동적 가변 매핑</h2>
-            <div class="chips"><span class="chip">변속할 때 쿵 충격</span><span class="chip">방지턱 넘을 때 찌그덕</span><span
-                    class="chip">달콤한 한약 냄새</span><span class="chip">에어컨 켤 때 삐걱 소리</span></div>
-            <div class="stats">
-                <div class="card rv">
-                    <div class="big">0원</div>
-                    <p>외부 LLM API 호출 비용</p>
+            <h2>운전자 체감 증상 기반 경량 룰 엔진 &amp;<br><span style="color:var(--ac)">파워트레인 자동 매핑</span></h2>
+            
+            <!-- 기획 배경 (Problem) 카드 -->
+            <div class="card rv" style="background:var(--soft);border-left:4px solid var(--ac);margin-bottom:24px;padding:20px 24px">
+                <div style="font-size:12px;font-weight:800;color:var(--ac);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px">
+                    기획 배경 (Problem)
                 </div>
-                <div class="card rv">
-                    <div class="big">0.01초</div>
-                    <p>JSON 룰 매핑 지연시간</p>
-                </div>
-                <div class="card rv">
-                    <div class="big">200~400만</div>
-                    <p>방치 시 미션 통교체 경고</p>
+                <h3 style="font-size:17px;color:var(--fg);margin-bottom:8px">“일반 차주는 부품명을 알지 못하고 오직 감각(소리, 충격, 냄새)으로만 이상을 느낍니다.”</h3>
+                <p style="font-size:14px;line-height:1.75;margin:0;color:var(--fg)">
+                    일반 차주는 부품명을 알지 못하고 오직 감각(소리, 충격, 냄새)으로만 이상을 느낍니다.<br>
+                    무거운 AI 호출 대신, <b>현장 정비 데이터를 기반으로 한 경량 룰 테이블</b>을 통해 즉각적인 점검 부품을 매핑합니다.
+                </p>
+            </div>
+
+            <!-- 운전자 체감 증상 ➔ 7대 핵심 부품 룰 매핑 -->
+            <div class="card rv" style="margin-bottom:20px;border-top:3px solid var(--ac)">
+                <h3 style="font-size:18px;margin-bottom:14px;color:var(--fg)">🎯 운전자 체감 증상 ➔ 7대 핵심 부품 룰 매핑</h3>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
+                    <div style="background:var(--bg);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.65">
+                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+                            <span class="chip r" style="font-size:10px;padding:2px 8px;font-weight:800">변속 충격</span>
+                            <b style="color:var(--fg)">“변속할 때 쿵 충격”</b>
+                        </div>
+                        <div style="color:var(--mut);margin-top:4px">
+                            ➔ <b>파워트레인 자동 연동</b><br>
+                            ➔ <b style="color:var(--ac)">미션오일 점검 (DCT/AT 주기 자동 분기)</b>
+                        </div>
+                    </div>
+
+                    <div style="background:var(--bg);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.65">
+                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+                            <span class="chip" style="font-size:10px;padding:2px 8px;font-weight:800;background:#eff6ff;color:#1d4ed8;border-color:#bfdbfe">하체 소음</span>
+                            <b style="color:var(--fg)">“방지턱 넘을 때 찌그덕 소리”</b>
+                        </div>
+                        <div style="color:var(--mut);margin-top:4px">
+                            ➔ <b>하체 서스펜션</b><br>
+                            ➔ <b style="color:#2563eb">로워암 부싱 / 활대링크 점검</b>
+                        </div>
+                    </div>
+
+                    <div style="background:var(--bg);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.65">
+                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+                            <span class="chip" style="font-size:10px;padding:2px 8px;font-weight:800;background:#fef2f2;color:#b91c1c;border-color:#fecaca">이상 냄새</span>
+                            <b style="color:var(--fg)">“달콤한 한약 냄새”</b>
+                        </div>
+                        <div style="color:var(--mut);margin-top:4px">
+                            ➔ <b>엔진 냉각 라인</b><br>
+                            ➔ <b style="color:#b91c1c">부동액(냉각수) 누수 및 호스 점검</b>
+                        </div>
+                    </div>
+
+                    <div style="background:var(--bg);padding:14px;border-radius:12px;border:1px solid var(--line);font-size:13px;line-height:1.65">
+                        <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+                            <span class="chip" style="font-size:10px;padding:2px 8px;font-weight:800;background:#ecfdf5;color:#059669;border-color:#a7f3d0">구동 벨트</span>
+                            <b style="color:var(--fg)">“에어컨 켤 때 삐걱 소리”</b>
+                        </div>
+                        <div style="color:var(--mut);margin-top:4px">
+                            ➔ <b>구동 계통</b><br>
+                            ➔ <b style="color:#059669">겉벨트(V벨트) 장력 및 크랙 점검</b>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- 투명한 정보 제공 & 리스크 방어 / 법적 리스크 방어 (면책 조항) -->
             <div class="grid">
-                <div class="card rv">
-                    <h3>AI 정밀 분석 리포트</h3>
-                    <ul>
-                        <li><b>기전 분석:</b> 점도 저하 및 슬러지의 밸브바디 유입 메커니즘</li>
-                        <li><b>고속도로 위험:</b> 합류 구간 가속 불능 사고 위험 고지</li>
-                        <li><b>손실 회피 앵커링:</b> 미션 통교체(앗세이) 경고로 정비 예약 유도</li>
-                    </ul>
+                <div class="card rv" style="border-top:3px solid #f59e0b">
+                    <h3 style="font-size:17px;margin-bottom:8px;color:var(--fg)">🛡️ 투명한 정보 제공 &amp; 리스크 방어</h3>
+                    <p style="font-size:14px;line-height:1.7;margin:0;color:var(--fg)">
+                        <b>사전 위험 고지:</b> 방치 시 2차 사고 위험 및 고액 수리비(미션 앗세이 교체 등) 사전 안내로 조기 점검 유도
+                    </p>
                 </div>
-                <div class="card rv">
-                    <h3>법적 리스크 통제</h3>
-                    <p>화면 하단 면책 명시: “정비 금액은 정비소 현장 실차 점검 후 최종 확정됩니다”</p>
+                <div class="card rv" style="border-top:3px solid #64748b">
+                    <h3 style="font-size:17px;margin-bottom:8px;color:var(--fg)">⚖️ 법적 리스크 방어 (면책 조항)</h3>
+                    <div style="background:var(--bg);padding:12px 14px;border-radius:10px;border:1px solid var(--line);font-size:13px;line-height:1.65;color:var(--fg)">
+                        “본 문진 결과는 사전 안내용 가이드이며, 최종 정비 항목 및 견적은 <b>정비소 현장 실차 점검 후 확정</b>됩니다.”
+                    </div>
                 </div>
             </div>
         </div>
